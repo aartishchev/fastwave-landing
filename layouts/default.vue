@@ -16,6 +16,7 @@ export default {
 .application {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  min-width: 320px;
   height: 100vh;
 }
 </style>

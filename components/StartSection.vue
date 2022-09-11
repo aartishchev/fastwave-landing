@@ -30,13 +30,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'StartSection',
-  layout: 'DefaultLayout'
-}
-</script>
-
 <style>
 .index-page {
   background: linear-gradient(180deg, #77B7E3 0%, #4098CA 100%);

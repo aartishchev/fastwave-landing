@@ -50,8 +50,6 @@
 
 <script>
 export default {
-  name: 'ProfileOffer',
-  layout: 'DefaultLayout',
   data: () => ({
     offerItems: [
       {

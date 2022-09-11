@@ -16,8 +16,6 @@
 
 <script>
 export default {
-  name: 'ServicesSection',
-  layout: 'DefaultLayout',
   data: () => ({
     items: [
       {

@@ -84,6 +84,7 @@
     font-weight: 700;
     letter-spacing: -0.25px;
     color: white;
+    text-align: center;
     margin-bottom: 20px;
   }
 

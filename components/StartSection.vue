@@ -91,11 +91,12 @@ export default {
 
 .index-page__contact-button {
   width: 160px;
-  height: 58px;
+  height: 53px;
   background-color: #a7cfe8;
   border-radius: 80px;
   font-size: 13px;
   line-height: 16px;
   font-weight: 700;
+  cursor: pointer;
 }
 </style>

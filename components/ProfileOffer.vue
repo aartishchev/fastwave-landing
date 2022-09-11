@@ -30,13 +30,18 @@
 
     <h2 class="profile-offer__partners-heading">Партнёры</h2>
     <ul class="profile-offer__partners-list">
-      <li v-for="(partner, index) in partnerItems" :key="index">
+      <li
+        v-for="(partner, index) in partnerItems"
+        :key="index"
+        class="profile-offer__partners-item"
+      >
         <span class="sr-only">partner.name</span>
         <img
-          :src="require(`~/assets/images/${partner.image}.jpg`)"
-          :alt="partner.name"
+          class="profile-offer__partners-item"
           width="86"
           height="86"
+          :src="require(`~/assets/images/${partner.image}.jpg`)"
+          :alt="partner.name"
         >
       </li>
     </ul>
@@ -203,5 +208,17 @@ export default {
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.profile-offer__partners-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-offer__partners-item {
+  width: 86px;
+  height: 86px;
 }
 </style>

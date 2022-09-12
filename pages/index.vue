@@ -4,6 +4,7 @@
     <ServicesSection />
     <ProfileOffer />
     <SpecialOffer />
+    <CompanyDescription />
   </div>
 </template>
 

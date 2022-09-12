@@ -71,6 +71,8 @@
   }
 
   .special-offer__image-description {
+    position: relative;
+    top: -10px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;

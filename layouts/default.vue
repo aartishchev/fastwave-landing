@@ -13,6 +13,5 @@ export default {
 <style>
 .application {
   min-width: 320px;
-  height: 100vh;
 }
 </style>

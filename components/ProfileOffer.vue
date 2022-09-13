@@ -137,7 +137,7 @@ export default {
 }
 
 .profile-offer__divider {
-  border: 4px solid #67b2dd;
+  border: 2px solid #67b2dd;
   margin-bottom: 30px;
 }
 

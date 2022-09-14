@@ -56,6 +56,7 @@ export default {
   })
 }
 </script>
+
 <style>
   .company-description {
     padding: 60px 10px;

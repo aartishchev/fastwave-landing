@@ -5,6 +5,7 @@
     <ProfileOffer />
     <SpecialOffer />
     <CompanyDescription />
+    <CompanyTeam />
   </div>
 </template>
 

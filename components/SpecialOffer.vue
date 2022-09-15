@@ -92,10 +92,9 @@
 
   .special-offer__offer-button {
     display: block;
-    margin: 0 auto;
-    justify-items: center;
     width: 160px;
     height: 53px;
+    margin: 0 auto;
     background-color: white;
     opacity: 80%;
     border-radius: 80px;

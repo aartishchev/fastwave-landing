@@ -1,11 +1,17 @@
 <template>
   <div class="application">
     <header class="application__header">
-      <NavBar />
+      <NavBar
+        :active-component="currentContent"
+        @set-content="setCurrentContent"
+      />
     </header>
 
     <main class="application__main">
-      <component :is="currentContent" />
+      <component
+        :is="currentContent"
+        class="application__dynamic-content"
+      />
     </main>
 
     <footer class="application__footer" />
@@ -24,7 +30,12 @@ export default {
       'SpecialOffer',
       'CompanyDescription'
     ]
-  })
+  }),
+  methods: {
+    setCurrentContent (componentName) {
+      this.currentContent = componentName
+    }
+  }
 }
 </script>
 
@@ -40,7 +51,7 @@ export default {
   margin: auto;
 }
 
-.application__main {
+.application__dynamic-content {
   height: 100vh;
 }
 </style>

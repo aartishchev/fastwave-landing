@@ -3,8 +3,9 @@
     <a
       v-for="(item, index) in navItems"
       :key="index"
-      class="nav-item"
+      :class="['nav-item', { 'nav-item--active': activeComponent === item.componentName }]"
       :title="item.description"
+      @click="setContent(item.componentName)"
     >
       <span class="sr-only">{{ item.description }}</span>
     </a>
@@ -13,30 +14,42 @@
 
 <script>
 export default {
+  props: {
+    activeComponent: {
+      type: String,
+      required: true
+    }
+  },
+  emits: ['setContent'],
   data: () => ({
     navItems: [
       {
-        description: 'Главная страница',
-        componentName: 'StartSection'
+        componentName: 'StartSection',
+        description: 'Главная страница'
       },
       {
-        description: 'Описания услуг',
-        componentName: 'ServicesSection'
+        componentName: 'ServicesSection',
+        description: 'Описания услуг'
       },
       {
-        description: 'Профильное предложение',
-        componentName: 'ProfileOffer'
+        componentName: 'ProfileOffer',
+        description: 'Профильное предложение'
       },
       {
-        description: 'Специальное предложение',
-        componentName: 'SpecialOffer'
+        componentName: 'SpecialOffer',
+        description: 'Специальное предложение'
       },
       {
-        description: 'О компании',
-        componentName: 'CompanyDescription'
+        componentName: 'CompanyDescription',
+        description: 'О компании'
       }
     ]
-  })
+  }),
+  methods: {
+    setContent (componentName) {
+      this.$emit('setContent', componentName)
+    }
+  }
 }
 </script>
 
@@ -52,7 +65,11 @@ export default {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 12px solid #01f1fe;
+  border-top: 12px solid #9dcbe7;
   border-bottom: 0;
+}
+
+.nav-item--active {
+  border-color: #01f1fe;
 }
 </style>

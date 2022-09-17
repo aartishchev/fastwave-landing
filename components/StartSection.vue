@@ -35,7 +35,6 @@
   background: linear-gradient(180deg, #77B7E3 0%, #4098CA 100%);
   padding: 20px 10px;
   color: white;
-  min-height: 705px;
   box-sizing: border-box;
 }
 

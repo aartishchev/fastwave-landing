@@ -3,7 +3,8 @@
     <a
       v-for="(item, index) in navItems"
       :key="index"
-      :class="['nav-item', { 'nav-item--active': activeComponent === item.componentName }]"
+      :style="{ borderTopColor: getItemColor(item.componentName) }"
+      class="nav-item"
       :title="item.description"
       @click="setContent(item.componentName)"
     >
@@ -18,36 +19,24 @@ export default {
     activeComponent: {
       type: String,
       required: true
+    },
+    navItems: {
+      type: Array,
+      default: () => []
     }
   },
-  emits: ['setContent'],
-  data: () => ({
-    navItems: [
-      {
-        componentName: 'StartSection',
-        description: 'Главная страница'
-      },
-      {
-        componentName: 'ServicesSection',
-        description: 'Описания услуг'
-      },
-      {
-        componentName: 'ProfileOffer',
-        description: 'Профильное предложение'
-      },
-      {
-        componentName: 'SpecialOffer',
-        description: 'Специальное предложение'
-      },
-      {
-        componentName: 'CompanyDescription',
-        description: 'О компании'
-      }
-    ]
-  }),
+  emits: ['set-content'],
+  computed: {
+    navItemsColor () {
+      return this.navItems.find(item => item.componentName === this.activeComponent).navItemsColor
+    }
+  },
   methods: {
     setContent (componentName) {
-      this.$emit('setContent', componentName)
+      this.$emit('set-content', componentName)
+    },
+    getItemColor (componentName) {
+      return componentName === this.activeComponent ? '#01f1fe' : this.navItemsColor
     }
   }
 }
@@ -65,11 +54,7 @@ export default {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 12px solid #9dcbe7;
+  border-top: 12px solid;
   border-bottom: 0;
-}
-
-.nav-item--active {
-  border-color: #01f1fe;
 }
 </style>

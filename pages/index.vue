@@ -28,31 +28,26 @@ export default {
       {
         componentName: 'StartSection',
         description: 'Главная страница',
-        layoutBackground: 'linear-gradient(180deg, #77B7E3 0%, #4098CA 100%)',
         navItemsColor: '#9ecbe7'
       },
       {
         componentName: 'ServicesSection',
         description: 'Описания услуг',
-        layoutBackground: 'white',
         navItemsColor: '#f0f0f0'
       },
       {
         componentName: 'ProfileOffer',
         description: 'Профильное предложение',
-        layoutBackground: 'white',
         navItemsColor: '#f0f0f0'
       },
       {
         componentName: 'SpecialOffer',
         description: 'Специальное предложение',
-        layoutBackground: '#252827',
         navItemsColor: '#6d6f6e'
       },
       {
         componentName: 'CompanyDescription',
         description: 'О компании',
-        layoutBackground: '#75b5e1',
         navItemsColor: '#9dc3de'
       }
     ]
@@ -70,11 +65,15 @@ export default {
   height: 100vh;
   min-width: 320px;
   display: grid;
-  grid-template-columns: 86px 1fr 86px;
+  grid-template-columns: 1fr 86px;
+  position: relative;
 }
 
 .application__header {
-  margin: auto;
+  position: absolute;
+  left: 37px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .application__dynamic-content {

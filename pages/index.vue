@@ -1,6 +1,6 @@
 <template>
   <div class="application">
-    <header class="application__header">
+    <header v-if="isDesktopLayout" class="application__header">
       <NavBar
         :active-component="currentContent"
         :nav-items="contentOptions"
@@ -11,11 +11,18 @@
     <main class="application__main">
       <component
         :is="currentContent"
+        v-if="isDesktopLayout"
         class="application__dynamic-content"
+      />
+      <component
+        :is="component.componentName"
+        v-for="(component, index) in contentOptions"
+        v-else
+        :key="index"
       />
     </main>
 
-  <footer class="application__footer" />
+    <footer v-if="isDesktopLayout" class="application__footer" />
   </div>
 </template>
 
@@ -23,6 +30,8 @@
 export default {
   name: 'IndexPage',
   data: () => ({
+    MIN_DESKTOP_VIEWPORT_WIDTH: 768,
+    currentClientWidth: 0,
     currentContent: 'StartSection',
     contentOptions: [
       {
@@ -52,9 +61,20 @@ export default {
       }
     ]
   }),
+  computed: {
+    isDesktopLayout () {
+      return this.currentClientWidth >= this.MIN_DESKTOP_VIEWPORT_WIDTH
+    }
+  },
+  beforeMount () {
+    window.addEventListener('resize', this.onWindowResize)
+  },
   methods: {
     setCurrentContent (componentName) {
       this.currentContent = componentName
+    },
+    onWindowResize () {
+      this.currentClientWidth = window.innerWidth
     }
   }
 }
@@ -65,8 +85,13 @@ export default {
   height: 100vh;
   min-width: 320px;
   display: grid;
-  grid-template-columns: 1fr 86px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .application {
+    grid-template-columns: 1fr 86px;
+  }
 }
 
 .application__header {

@@ -12,6 +12,7 @@
       <component
         :is="currentContent"
         v-if="isDesktopLayout"
+        :is-desktop-layout="isDesktopLayout"
         class="application__dynamic-content"
       />
       <component
@@ -88,12 +89,6 @@ export default {
   position: relative;
 }
 
-@media (min-width: 768px) {
-  .application {
-    grid-template-columns: 1fr 86px;
-  }
-}
-
 .application__header {
   position: absolute;
   left: 37px;
@@ -103,5 +98,12 @@ export default {
 
 .application__dynamic-content {
   height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .application {
+    grid-template-columns: 1fr 86px;
+  }
 }
 </style>

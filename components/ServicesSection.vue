@@ -14,11 +14,11 @@
 
     <div class="services-page__cubes">
       <div class="services-page__secret-cube">
-        <img src="@/assets/images/coin-dollar.svg" alt="Иконка доллара">
+        <img src="@/assets/icons/coin-dollar.svg" alt="Иконка доллара">
         <p class="services-page__secret-title">Без <br> предоплаты</p>
       </div>
       <div class="services-page__secret-cube">
-        <img src="@/assets/images/cargo.svg" alt="Иконка груза">
+        <img src="@/assets/icons/cargo.svg" alt="Иконка груза">
         <p class="services-page__secret-title">Грузы <br> от 30кг</p>
       </div>
       <div class="services-page__secret-cube">

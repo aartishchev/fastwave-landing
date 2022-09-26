@@ -35,11 +35,11 @@
         <span>Мессенджеры:</span>
         <a>
           <span class="sr-only">Ссылка на канал в Telegram</span>
-          <img src="@/assets/images/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
+          <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
         </a>
         <a>
           <span class="sr-only">Ссылка на канал в WhatsApp</span>
-          <img src="@/assets/images/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
+          <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
         </a>
       </p>
     </div>

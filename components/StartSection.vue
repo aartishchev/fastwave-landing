@@ -17,7 +17,7 @@
         <a class="index-page__social-link">
           <span class="sr-only">Ссылка на группу в VK</span>
           <img
-            src="@/assets/images/vk-link.svg"
+            src="@/assets/icons/vk-link.svg"
             width="20"
             height="20"
             alt="Иконка VK"
@@ -27,7 +27,7 @@
         <a class="index-page__social-link">
           <span class="sr-only">Ссылка на канал в Telegram</span>
           <img
-            src="@/assets/images/telegram-link.svg"
+            src="@/assets/icons/telegram-link.svg"
             width="20"
             height="20"
             alt="Иконка Telegram"

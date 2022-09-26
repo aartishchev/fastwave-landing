@@ -3,7 +3,7 @@
     <header class="index-page__header">
       <img
         class="index-page__logo"
-        src="@/assets/images/logo.jpg"
+        src="@/assets/images/logo.png"
         :width="isDesktopLayout ? 160 : 80"
         :height="isDesktopLayout ? 40 : 20"
         alt="Логотип"
@@ -70,6 +70,7 @@ export default {
   background: linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
   padding: 20px 10px;
   color: white;
+  min-height: 705px;
 }
 
 .index-page__header {
@@ -131,6 +132,7 @@ export default {
 @media (min-width: 768px) {
   .index-page {
     padding: 40px 30px;
+    min-height: auto;
   }
 
   .index-page__header {

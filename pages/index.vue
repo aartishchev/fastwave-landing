@@ -67,14 +67,18 @@ export default {
       return this.currentClientWidth >= this.MIN_DESKTOP_VIEWPORT_WIDTH
     }
   },
-  beforeMount () {
-    window.addEventListener('resize', this.onWindowResize)
+  mounted () {
+    this.setWindowSize()
+    window.addEventListener('resize', this.setWindowSize)
+  },
+  beforeUnmount () {
+    window.removeEventListener('resize', this.setWindowSize)
   },
   methods: {
     setCurrentContent (componentName) {
       this.currentContent = componentName
     },
-    onWindowResize () {
+    setWindowSize () {
       this.currentClientWidth = window.innerWidth
     }
   }
@@ -97,7 +101,7 @@ export default {
 }
 
 .application__dynamic-content {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 

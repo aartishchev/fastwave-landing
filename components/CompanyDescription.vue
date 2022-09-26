@@ -138,7 +138,7 @@ export default {
     left: 0;
     width: 20px;
     height: 20px;
-    background-image: url('~assets/images/vk-white.svg');;
+    background-image: url('~assets/images/vk-white.svg');
   }
 
   .company-description__divider {

@@ -11,6 +11,28 @@
         <p class="services-page__item-text">{{ item.text }}</p>
       </li>
     </ul>
+
+    <div class="services-page__cubes">
+      <div class="services-page__secret-cube">
+        <img src="@/assets/images/coin-dollar.svg" alt="Иконка доллара">
+        <p class="services-page__secret-title">Без <br> предоплаты</p>
+      </div>
+      <div class="services-page__secret-cube">
+        <img src="@/assets/images/cargo.svg" alt="Иконка груза">
+        <p class="services-page__secret-title">Грузы <br> от 30кг</p>
+      </div>
+      <div class="services-page__secret-cube">
+        <img src="@/assets/icons/calendar.svg" alt="Иконка календаря">
+        <p class="services-page__secret-title">Гарантия сроков поставки</p>
+      </div>
+      <div class="services-page__secret-cube">
+        <img src="@/assets/icons/wallet.svg" alt="Иконка кошелька">
+        <p class="services-page__secret-title">Без скрытых платежей</p>
+      </div>
+      <div class="services-page__secret-cube">
+        <img src="@/assets/images/logo.png" alt="Логотип компании">
+      </div>
+    </div>
   </section>
 </template>
 
@@ -50,6 +72,7 @@ export default {
   line-height: 25px;
   font-weight: 700;
   text-transform: uppercase;
+  max-width: 300px;
   margin-bottom: 50px;
 }
 
@@ -58,9 +81,7 @@ export default {
 }
 
 .services-page__list {
-  display: flex;
-  min-width: 300px;
-  flex-wrap: wrap;
+  display: grid;
   row-gap: 50px;
 }
 
@@ -74,5 +95,61 @@ export default {
 .services-page__item-text {
   font-size: 12px;
   line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .services-page {
+    padding: 60px 40px 60px 130px;
+  }
+
+  .services-page__heading {
+    font-size: 40px;
+    line-height: 48px;
+    max-width: 580px;
+  }
+
+  .services-page__list {
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    row-gap: 40px;
+    column-gap: 60px
+  }
+
+  .services-page__item-heading {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -1.5px;
+  }
+
+  .services-page__item-text {
+    font-size: 14px;
+    letter-spacing: -1.5px;
+  }
+
+  .services-page__cubes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .services-page__secret-cube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    width: 312px;
+    height: 312px;
+    background-image: url('~assets/images/cyan-cube.png');
+  }
+
+  .services-page__secret-title {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1.5px;
+    text-transform: lowercase;
+    max-width: 70px
+  }
 }
 </style>

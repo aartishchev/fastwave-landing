@@ -3,12 +3,12 @@
     <a
       v-for="(item, index) in navItems"
       :key="index"
-      :style="{ borderTopColor: getItemColor(item.componentName) }"
       class="nav-item"
       :title="item.description"
       @click="setContent(item.componentName)"
     >
       <span class="sr-only">{{ item.description }}</span>
+      <span class="nav-icon" :style="{ borderTopColor: getItemColor(item.componentName) }" />
     </a>
   </nav>
 </template>
@@ -22,7 +22,7 @@ export default {
     },
     navItems: {
       type: Array,
-      default: () => []
+      required: true
     }
   },
   emits: ['set-content'],
@@ -46,10 +46,14 @@ export default {
 .nav-wrapper {
   display: grid;
   justify-items: center;
-  row-gap: 15px;
 }
 
 .nav-item {
+  padding: 7px;
+}
+
+.nav-icon {
+  display: inline-block;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;

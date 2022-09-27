@@ -12,27 +12,55 @@
       </li>
     </ul>
 
-    <div class="services-page__cubes">
-      <div class="services-page__secret-cube">
-        <img src="@/assets/icons/coin-dollar.svg" alt="Иконка доллара">
+    <ul class="services-page__cubes">
+      <li class="services-page__secret-cube">
+        <img
+          class="services-page__cube-icon"
+          src="@/assets/icons/coin-dollar.svg"
+          alt="Иконка доллара"
+        >
         <p class="services-page__secret-title">Без <br> предоплаты</p>
-      </div>
-      <div class="services-page__secret-cube">
-        <img src="@/assets/icons/cargo.svg" alt="Иконка груза">
+      </li>
+      <li class="services-page__secret-cube">
+        <img
+          class="services-page__cube-icon"
+          src="@/assets/icons/cargo.svg"
+          alt="Иконка груза"
+          width="62"
+          height="62"
+        >
         <p class="services-page__secret-title">Грузы <br> от 30кг</p>
-      </div>
-      <div class="services-page__secret-cube">
-        <img src="@/assets/icons/calendar.svg" alt="Иконка календаря">
+      </li>
+      <li class="services-page__secret-cube">
+        <img
+          class="services-page__cube-icon"
+          src="@/assets/icons/calendar.svg"
+          alt="Иконка календаря"
+          width="62"
+          height="62"
+        >
         <p class="services-page__secret-title">Гарантия сроков поставки</p>
-      </div>
-      <div class="services-page__secret-cube">
-        <img src="@/assets/icons/wallet.svg" alt="Иконка кошелька">
+      </li>
+      <li class="services-page__secret-cube">
+        <img
+          class="services-page__cube-icon"
+          src="@/assets/icons/wallet.svg"
+          alt="Иконка кошелька"
+          width="62"
+          height="62"
+        >
         <p class="services-page__secret-title">Без скрытых платежей</p>
-      </div>
-      <div class="services-page__secret-cube">
-        <img src="@/assets/images/logo.png" alt="Логотип компании">
-      </div>
-    </div>
+      </li>
+      <li class="services-page__secret-cube">
+        <img
+          class="services-page__cube-icon-logo"
+          src="@/assets/images/logo.png"
+          alt="Логотип компании"
+          width="130"
+          height="32"
+        >
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -97,6 +125,10 @@ export default {
   line-height: 20px;
 }
 
+.services-page__secret-cube {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .services-page {
     padding: 60px 40px 60px 130px;
@@ -137,8 +169,8 @@ export default {
     align-items: center;
     justify-content: center;
     row-gap: 10px;
-    width: 312px;
-    height: 312px;
+    width: 190px;
+    height: 248px;
     background-image: url('~assets/images/cyan-cube.png');
   }
 
@@ -150,6 +182,16 @@ export default {
     letter-spacing: -1.5px;
     text-transform: lowercase;
     max-width: 70px
+  }
+
+  .services-page__cube-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .services-page__cube-icon-logo {
+    width: 130px;
+    height: 32px;
   }
 }
 </style>

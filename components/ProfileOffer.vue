@@ -6,29 +6,34 @@
       <span class="profile-offer__highlight">го</span>роде
     </h1>
 
-    <p class="profile-offer__text">
-      Предлагаем комплекс услуг для предпринимателей, которые только начинают или уже активно сотрудничают c основными отечественными маркетплейсами
-    </p>
-
-    <hr class="profile-offer__divider">
-
-    <p class="profile-offer__description">
-      Мы не предлагаем что-то уникальное. Мы объединили необходимые услуги, которые действительно работают и оптимизировали их под Ваши задачи
-    </p>
-
-    <ul class="profile-offer__list">
-      <li
-        v-for="(item, index) in offerItems"
-        :key="index"
-        :style="{ backgroundImage: `url(${item.image})` }"
-        class="profile-offer__item"
-      >
-        <p class="profile-offer__definition">{{ item.text }}</p>
-        <p v-if="item.detail" class="profile-offer__detail">{{ item.detail }}</p>
-      </li>
-    </ul>
+    <div class="profile-offer__content-wrapper">
+      <div>
+        <p class="profile-offer__text">
+          Предлагаем комплекс услуг для предпринимателей,
+          которые только начинают или уже активно сотрудничают
+          c основными отечественными маркетплейсами
+        </p>
+        <hr class="profile-offer__divider">
+        <p class="profile-offer__description">
+          Мы не предлагаем что-то уникальное. Мы объединили необходимые услуги,
+          которые действительно работают и оптимизировали их под Ваши задачи
+        </p>
+      </div>
+      <ul class="profile-offer__list">
+        <li
+          v-for="(item, index) in offerItems"
+          :key="index"
+          :style="{ backgroundImage: `url(${item.image})` }"
+          class="profile-offer__item"
+        >
+          <p class="profile-offer__definition">{{ item.text }}</p>
+          <p v-if="item.detail" class="profile-offer__detail">{{ item.detail }}</p>
+        </li>
+      </ul>
+    </div>
 
     <h2 class="profile-offer__partners-heading">Партнёры</h2>
+
     <ul class="profile-offer__partners-list">
       <li
         v-for="(partner, index) in partnerItems"
@@ -127,6 +132,12 @@ export default {
   color: #67b2dd;
 }
 
+.profile-offer__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
 .profile-offer__text {
   color: #252827;
   font-size: 14px;
@@ -146,7 +157,6 @@ export default {
   font-size: 14px;
   line-height: 23px;
   letter-spacing: -0.25px;
-  margin-bottom: 30px;
 }
 
 .profile-offer__list {
@@ -218,5 +228,23 @@ export default {
 .profile-offer__partners-item {
   width: 86px;
   height: 86px;
+}
+
+@media (min-width: 768px) {
+  .profile-offer {
+    padding: 60px 80px 140px 130px;
+  }
+
+  .profile-offer__heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 70px;
+  }
+
+  .profile-offer__content-wrapper {
+    flex-direction: row;
+    column-gap: 60px;
+  }
+
 }
 </style>

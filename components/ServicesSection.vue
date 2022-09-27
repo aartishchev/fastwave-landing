@@ -12,7 +12,7 @@
       </li>
     </ul>
 
-    <ul class="services-page__cubes">
+    <ul v-if="isDesktopLayout" class="services-page__cubes">
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon"
@@ -66,6 +66,12 @@
 
 <script>
 export default {
+  props: {
+    isDesktopLayout: {
+      type: Boolean,
+      required: true
+    }
+  },
   data: () => ({
     items: [
       {
@@ -125,11 +131,7 @@ export default {
   line-height: 20px;
 }
 
-.services-page__secret-cube {
-  display: none;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1218px) {
   .services-page {
     padding: 60px 40px 60px 130px;
   }

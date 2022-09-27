@@ -31,7 +31,7 @@
 export default {
   name: 'IndexPage',
   data: () => ({
-    MIN_DESKTOP_VIEWPORT_WIDTH: 768,
+    MIN_DESKTOP_VIEWPORT_WIDTH: 1218,
     currentClientWidth: 0,
     currentContent: 'StartSection',
     contentOptions: [
@@ -105,7 +105,7 @@ export default {
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1218px) {
   .application {
     grid-template-columns: 1fr 86px;
   }

@@ -35,16 +35,12 @@
     <h2 class="profile-offer__partners-heading">Партнёры</h2>
 
     <ul class="profile-offer__partners-list">
-      <li
-        v-for="(partner, index) in partnerItems"
-        :key="index"
-        class="profile-offer__partners-item"
-      >
+      <li v-for="(partner, index) in partnerItems" :key="index">
         <span class="sr-only">partner.name</span>
         <img
-          class="profile-offer__partners-item"
-          width="86"
-          height="86"
+          class="profile-offer__partners-logo"
+          :width="isDesktopLayout ? 146 : 86"
+          :height="isDesktopLayout ? 146 : 86"
           :src="require(`~/assets/images/${partner.image}.jpg`)"
           :alt="partner.name"
         >
@@ -55,6 +51,12 @@
 
 <script>
 export default {
+  props: {
+    isDesktopLayout: {
+      type: Boolean,
+      required: true
+    }
+  },
   data: () => ({
     offerItems: [
       {
@@ -87,27 +89,27 @@ export default {
     partnerItems: [
       {
         name: 'Wildberries',
-        image: 'wb'
+        image: 'partner-wb'
       },
       {
         name: 'Ozon',
-        image: 'ozon'
+        image: 'partner-ozon'
       },
       {
         name: 'Yandex market',
-        image: 'yandex'
+        image: 'partner-yandex'
       },
       {
         name: 'Sberbank market',
-        image: 'sber'
+        image: 'partner-sber'
       },
       {
         name: 'Aliexpress',
-        image: 'ali'
+        image: 'partner-ali'
       },
       {
         name: 'Avito',
-        image: 'avito'
+        image: 'partner-avito'
       }
     ]
   })
@@ -136,6 +138,7 @@ export default {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+  margin-bottom: 80px;
 }
 
 .profile-offer__text {
@@ -161,10 +164,9 @@ export default {
 
 .profile-offer__list {
   display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  align-items: center;
-  margin-bottom: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .profile-offer__item {
@@ -198,6 +200,7 @@ export default {
 }
 
 .profile-offer__definition {
+  padding: 0 20px;
   z-index: 10;
 }
 
@@ -225,14 +228,14 @@ export default {
   gap: 20px;
 }
 
-.profile-offer__partners-item {
+.profile-offer__partners-logo {
   width: 86px;
   height: 86px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1218px) {
   .profile-offer {
-    padding: 60px 80px 140px 130px;
+    padding: 60px 80px 60px 130px;
   }
 
   .profile-offer__heading {
@@ -244,7 +247,52 @@ export default {
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
+    margin-bottom: 100px;
   }
 
+  .profile-offer__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .profile-offer__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .profile-offer__list {
+    flex: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .profile-offer__item {
+    width: 180px;
+    height: 180px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .profile-offer__detail {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .profile-offer__partners-heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 60px;
+  }
+
+  .profile-offer__partners-list {
+    gap: 30px;
+  }
+
+  .profile-offer__partners-logo {
+    width: 124px;
+    height: 124px;
+  }
 }
 </style>

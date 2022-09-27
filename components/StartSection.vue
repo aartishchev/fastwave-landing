@@ -59,7 +59,7 @@ export default {
   props: {
     isDesktopLayout: {
       type: Boolean,
-      default: false
+      required: true
     }
   }
 }
@@ -129,7 +129,7 @@ export default {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1218px) {
   .index-page {
     padding: 40px 30px;
     min-height: auto;

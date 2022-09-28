@@ -126,7 +126,6 @@ export default {
   font-size: 13px;
   line-height: 16px;
   font-weight: 700;
-  cursor: pointer;
 }
 
 @media (min-width: 1218px) {
@@ -170,11 +169,9 @@ export default {
   .index-page__contact-button {
     width: 200px;
     height: 66px;
-    background-color: #a7cfe8;
     border-radius: 100px;
     font-size: 16px;
     line-height: 19px;
-    font-weight: 700;
   }
 }
 </style>

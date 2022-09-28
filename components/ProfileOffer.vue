@@ -241,13 +241,13 @@ export default {
   .profile-offer__heading {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 
   .profile-offer__text {

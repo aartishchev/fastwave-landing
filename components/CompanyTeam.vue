@@ -160,7 +160,6 @@ export default {
   font-size: 13px;
   line-height: 16px;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .company-team__contacts {

@@ -12,14 +12,15 @@
       <component
         :is="currentContent"
         v-if="isDesktopLayout"
-        :is-desktop-layout="isDesktopLayout"
         class="application__dynamic-content"
+        :is-desktop-layout="isDesktopLayout"
       />
       <component
         :is="component.componentName"
         v-for="(component, index) in contentOptions"
         v-else
         :key="index"
+        :is-desktop-layout="isDesktopLayout"
       />
     </main>
 

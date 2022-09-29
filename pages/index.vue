@@ -24,7 +24,9 @@
       />
     </main>
 
-    <footer v-if="isDesktopLayout" class="application__footer" />
+    <footer v-if="isDesktopLayout" class="application__footer">
+      <ContactBar />
+    </footer>
   </div>
 </template>
 

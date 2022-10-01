@@ -112,5 +112,9 @@ export default {
   .application {
     grid-template-columns: 1fr 86px;
   }
+
+  .application__footer {
+    cursor: pointer;
+  }
 }
 </style>

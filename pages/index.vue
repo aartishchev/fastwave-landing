@@ -32,6 +32,8 @@
         :is-desktop-layout="isDesktopLayout"
         @close-team-modal="closeTeamModal"
       />
+
+      <ModalForm />
     </main>
 
     <footer v-if="isDesktopLayout" class="application__footer" @click="openTeamModal">
@@ -41,10 +43,8 @@
 </template>
 
 <script>
-import CompanyTeam from '~/components/CompanyTeam.vue'
 export default {
   name: 'IndexPage',
-  components: { CompanyTeam },
   data: () => ({
     MIN_DESKTOP_VIEWPORT_WIDTH: 1218,
     currentClientWidth: 0,

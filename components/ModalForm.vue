@@ -18,16 +18,10 @@
           Я соглашаюсь с политикой конфиденциальности
         </label>
       </div>
-      <button type="submit">Отправить</button>
+      <button class="modal-form__submit-button" type="submit">Отправить</button>
     </form>
   </section>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style>
 .modal-form {
@@ -69,4 +63,52 @@ export default {
   color: inherit;
 }
 
+.modal-form__label {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  max-width: 180px;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.modal-form__label::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0px;
+  left: 0px;
+  border: 1px solid #67b2dd;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.modal-form__checkbox:checked + .modal-form__label::before {
+  background-color: #67b2dd;
+}
+
+.modal-form__checkbox:checked + .modal-form__label::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 13px;
+  height: 11px;
+  background-image: url('~assets/icons/check.svg');
+}
+
+.modal-form__submit-button {
+  width: 200px;
+  height: 66px;
+  color: white;
+  background-color: #67b2dd;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  border-radius: 100px;
+  margin-top: 10px;
+}
 </style>

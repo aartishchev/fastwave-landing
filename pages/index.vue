@@ -23,7 +23,7 @@
           :key="index"
           :is-desktop-layout="isDesktopLayout"
         />
-        <CompanyTeam />
+        <CompanyTeam :is-desktop-layout="isDesktopLayout" />
       </template>
 
       <CompanyTeam

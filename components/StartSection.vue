@@ -1,20 +1,20 @@
 <template>
-  <section class="index-page">
-    <header class="index-page__header">
+  <section class="start-page">
+    <header class="start-page__header">
       <img
-        class="index-page__logo"
+        class="start-page__logo"
         src="@/assets/images/logo.png"
         :width="isDesktopLayout ? 160 : 80"
         :height="isDesktopLayout ? 40 : 20"
         alt="Логотип"
       >
 
-      <p v-if="isDesktopLayout" class="index-page__motto">
+      <p v-if="isDesktopLayout" class="start-page__motto">
         Ответственность. Надежность. Оперативность
       </p>
 
-      <div v-else class="index-page__social">
-        <a class="index-page__social-link">
+      <div v-else class="start-page__social">
+        <a class="start-page__social-link">
           <span class="sr-only">Ссылка на группу в VK</span>
           <img
             src="@/assets/icons/vk-link.svg"
@@ -24,7 +24,7 @@
           >
         </a>
 
-        <a class="index-page__social-link">
+        <a class="start-page__social-link">
           <span class="sr-only">Ссылка на канал в Telegram</span>
           <img
             src="@/assets/icons/telegram-link.svg"
@@ -34,22 +34,22 @@
           >
         </a>
 
-        <a class="index-page__social-telnumber" href="tel:84957951326">
+        <a class="start-page__social-telnumber" href="tel:84957951326">
           +7(495)7951326
         </a>
       </div>
     </header>
 
-    <main class="index-page__main">
-      <h1 class="index-page__heading">
+    <main class="start-page__main">
+      <h1 class="start-page__heading">
         Безопасная доставка любых грузов из Китая за 7-30 дней
       </h1>
 
-      <p class="index-page__description">
+      <p class="start-page__description">
         Организуем весь спектр логистических услуг с полной страховкой
       </p>
 
-      <button class="index-page__contact-button">Перезвоните мне</button>
+      <button class="start-page__contact-button">Перезвоните мне</button>
     </main>
   </section>
 </template>
@@ -66,26 +66,30 @@ export default {
 </script>
 
 <style>
-.index-page {
-  background: linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
+.start-page {
   padding: 20px 10px;
   color: white;
   min-height: 705px;
+  background-image:
+    url('~assets/images/start-mobile-bg.jpg'),
+    linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
-.index-page__header {
+.start-page__header {
   display: flex;
   align-items: center;
   column-gap: 16px;
   margin-bottom: 30px;
 }
 
-.index-page__logo {
+.start-page__logo {
   width: 80px;
   height: 20px;
 }
 
-.index-page__social {
+.start-page__social {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
@@ -93,32 +97,32 @@ export default {
   margin-left: auto;
 }
 
-.index-page__social-link {
+.start-page__social-link {
   width: 20px;
   height: 20px;
 }
 
-.index-page__social-telnumber {
+.start-page__social-telnumber {
   grid-column: 1 / 3;
   font-size: 16px;
   line-height: 23px;
   font-weight: 600;
 }
 
-.index-page__heading {
+.start-page__heading {
   font-size: 32px;
   line-height: 38px;
   font-weight: 700px;
   margin-bottom: 30px;
 }
 
-.index-page__description {
+.start-page__description {
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 30px;
 }
 
-.index-page__contact-button {
+.start-page__contact-button {
   width: 160px;
   height: 53px;
   background-color: #a7cfe8;
@@ -129,44 +133,49 @@ export default {
 }
 
 @media (min-width: 1218px) {
-  .index-page {
+  .start-page {
     padding: 40px 30px;
     min-height: auto;
+    background-image:
+      url('~assets/images/start-desktop-bg.jpg'),
+      linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
+    background-position: right center;
+    background-repeat: no-repeat;
   }
 
-  .index-page__header {
+  .start-page__header {
     margin-bottom: 80px;
   }
 
-  .index-page__logo {
+  .start-page__logo {
     width: 160px;
     height: 40px;
   }
 
-  .index-page__motto {
+  .start-page__motto {
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
   }
 
-  .index-page__main {
+  .start-page__main {
     margin-left: 100px;
   }
 
-  .index-page__heading {
+  .start-page__heading {
     font-size: 48px;
     line-height: 58px;
     font-weight: 700px;
     margin-bottom: 40px;
   }
 
-  .index-page__description {
+  .start-page__description {
     font-size: 20px;
     line-height: 29px;
     margin-bottom: 46px;
   }
 
-  .index-page__contact-button {
+  .start-page__contact-button {
     width: 200px;
     height: 66px;
     border-radius: 100px;

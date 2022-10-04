@@ -15,13 +15,18 @@
         class="application__dynamic-content"
         :is-desktop-layout="isDesktopLayout"
       />
-      <component
-        :is="component.componentName"
-        v-for="(component, index) in contentOptions"
-        v-else
-        :key="index"
-        :is-desktop-layout="isDesktopLayout"
-      />
+
+      <template v-else>
+        <component
+          :is="component.componentName"
+          v-for="(component, index) in contentOptions"
+          :key="index"
+          :is-desktop-layout="isDesktopLayout"
+        />
+        <CompanyTeam />
+      </template>
+
+      <CompanyTeam class="application__team-modal" />
     </main>
 
     <footer v-if="isDesktopLayout" class="application__footer">
@@ -31,8 +36,10 @@
 </template>
 
 <script>
+import CompanyTeam from '~/components/CompanyTeam.vue'
 export default {
   name: 'IndexPage',
+  components: { CompanyTeam },
   data: () => ({
     MIN_DESKTOP_VIEWPORT_WIDTH: 1218,
     currentClientWidth: 0,

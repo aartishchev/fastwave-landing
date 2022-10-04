@@ -19,41 +19,53 @@
       </li>
     </ul>
 
-    <div class="company-team__social">
-      <p class="company-team__offer">Свяжитесь с нами по телефону</p>
-      <a class="company-team__telnumber" href="tel:84957951326">+7(495)7951326</a>
-      <p class="company-team__working-time">С 9 до 18 МСК</p>
-      <p class="company-team__or-phrase">или</p>
-      <button class="company-team__offer-button">Оставить заявку</button>
-    </div>
+    <div class="company-team__wrapper">
+      <div class="company-team__social">
+        <p class="company-team__offer">Свяжитесь с нами по телефону</p>
+        <div class="company-team__inside-wrapper">
+          <a class="company-team__telnumber" href="tel:84957951326">+7(495)7951326</a>
+          <p class="company-team__working-time">С 9 до 18 МСК</p>
+        </div>
+        <p class="company-team__or-phrase">или</p>
+        <button class="company-team__offer-button">Оставить заявку</button>
+      </div>
 
-    <div class="company-team__contacts">
-      <p>
-        Почта:<a class="company-team__email" href="mailto:hello@fastwave.ru">hello@fastwave.ru</a>
-      </p>
-      <p class="company-team__messengers-wrapper">
-        <span>Мессенджеры:</span>
-        <a>
-          <span class="sr-only">Ссылка на канал в Telegram</span>
-          <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
-        </a>
-        <a>
-          <span class="sr-only">Ссылка на канал в WhatsApp</span>
-          <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
-        </a>
-      </p>
-    </div>
+      <div>
+        <div class="company-team__contacts">
+          <p>
+            Почта:<a class="company-team__email" href="mailto:hello@fastwave.ru">hello@fastwave.ru</a>
+          </p>
+          <p class="company-team__messengers-wrapper">
+            <span>Мессенджеры:</span>
+            <a>
+              <span class="sr-only">Ссылка на канал в Telegram</span>
+              <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
+            </a>
+            <a>
+              <span class="sr-only">Ссылка на канал в WhatsApp</span>
+              <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
+            </a>
+          </p>
+        </div>
 
-    <p class="company-team__condition">
-      Для обсуждения проектов мы предпочитаем личное общение,
-      поэтому готовы приехать к вам или пригласить в наш офис по адресу:
-      Москва Город,ул. Малая Семёновская, д. 30, офис 213а
-    </p>
+        <p class="company-team__condition">
+          Для обсуждения проектов мы предпочитаем личное общение,
+          поэтому готовы приехать к вам или пригласить в наш офис по адресу:
+          Москва Город,ул. Малая Семёновская, д. 30, офис 213а
+        </p>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
+  props: {
+    isDesktopLayout: {
+      type: Boolean,
+      required: true
+    }
+  },
   data: () => ({
     team: [
       {
@@ -116,13 +128,21 @@ export default {
   text-align: center;
 }
 
-.company-team__social {
+.company-team__wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+}
+
+.company-team__inside-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.company-team__social {
+  display: grid;
   text-align: center;
   row-gap: 10px;
-  margin-bottom: 50px;
 }
 
 .company-team__offer {
@@ -151,9 +171,7 @@ export default {
 }
 
 .company-team__offer-button {
-  width: 160px;
-  height: 53px;
-  display: block;
+  padding: 20px 25px;
   margin: 0 auto;
   border: 1px solid #252827;
   border-radius: 80px;
@@ -188,5 +206,57 @@ export default {
   font-size: 14px;
   line-height: 23px;
   letter-spacing: -0.5px;
+}
+
+@media (min-width: 1218px) {
+  .company-team {
+    padding: 60px 30px 0px;
+  }
+
+  .company-team__header {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .company-team__list {
+    margin-bottom: 140px;
+  }
+
+  .company-team__wrapper {
+    flex-direction: row;
+    column-gap: 190px;
+  }
+
+  .company-team__inside-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 18px;
+    margin-bottom: 10px;
+  }
+
+  .company-team__social {
+    flex: none;
+    text-align: left;
+  }
+
+  .company-team__offer-button {
+    padding: 24px 30px;
+    margin: 0;
+    margin-right: auto;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .company-team__contacts {
+    margin-bottom: 40px;
+  }
+
+  .company-team__condition {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
 }
 </style>

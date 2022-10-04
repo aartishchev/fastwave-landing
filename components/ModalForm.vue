@@ -13,7 +13,6 @@
           type="checkbox"
           name="checkbox-accepted"
           value="accepted"
-          checked
         >
         <label class="modal-form__label" for="checkbox-accepted">
           Я соглашаюсь с политикой конфиденциальности

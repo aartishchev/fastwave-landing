@@ -40,7 +40,11 @@
       </div>
     </main>
 
-    <footer v-if="isDesktopLayout" class="application__footer" @click="openTeamModal">
+    <footer
+      v-if="isDesktopLayout && !isTeamModalShown"
+      class="application__footer"
+      @click="openTeamModal"
+    >
       <ContactBar />
     </footer>
   </div>
@@ -117,7 +121,16 @@ export default {
       this.isFormModalShown = false
     },
     onEscapeButton (event) {
-      if (event.key === 'Escape' && this.isTeamModalShown) {
+      if (event.key !== 'Escape') {
+        return
+      }
+
+      if (this.isFormModalShown) {
+        this.closeFormModal()
+        return
+      }
+
+      if (this.isTeamModalShown) {
         this.closeTeamModal()
       }
     }
@@ -168,7 +181,7 @@ export default {
 
 @media (min-width: 1218px) {
   .application {
-    grid-template-columns: 1fr 86px;
+    grid-template-columns: 1fr auto;
     position: relative;
   }
 
@@ -178,15 +191,16 @@ export default {
 
   .application__footer {
     cursor: pointer;
+    width: 86px;
   }
 
   .application__team-modal {
-    position: absolute;
+    position: fixed;
     background-color: white;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
   }
 }
 </style>

@@ -22,11 +22,17 @@
       <button class="modal-form__submit-button" type="submit">Отправить</button>
     </form>
 
-    <button class="modal-form__close-button">
+    <button class="modal-form__close-button" @click="$emit('close-form-modal')">
       <span class="sr-only">Закрыть модальное окно</span>
     </button>
   </section>
 </template>
+
+<script>
+export default {
+  emits: ['close-form-modal']
+}
+</script>
 
 <style>
 .modal-form {

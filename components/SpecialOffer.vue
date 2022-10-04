@@ -29,7 +29,7 @@
       Хотите получить лучшие условия по доставке майнинг оборудования из Китая?
     </p>
 
-    <button class="special-offer__offer-button">
+    <button class="special-offer__offer-button" @click="$emit('open-form-modal')">
       Узнать цену
     </button>
   </section>
@@ -42,7 +42,8 @@ export default {
       type: Boolean,
       required: true
     }
-  }
+  },
+  emits: ['open-form-modal']
 }
 </script>
 

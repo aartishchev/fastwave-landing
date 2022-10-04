@@ -9,12 +9,20 @@
     </header>
 
     <main class="application__main">
-      <component
-        :is="currentContent"
-        v-if="isDesktopLayout"
-        class="application__dynamic-content"
-        :is-desktop-layout="isDesktopLayout"
-      />
+      <template v-if="isDesktopLayout">
+        <component
+          :is="currentContent"
+          class="application__dynamic-content"
+          :is-desktop-layout="isDesktopLayout"
+          @open-form-modal="openFormModal"
+        />
+        <CompanyTeam
+          v-if="isTeamModalShown"
+          class="application__team-modal"
+          @close-team-modal="closeTeamModal"
+          @open-form-modal="openFormModal"
+        />
+      </template>
 
       <template v-else>
         <component
@@ -22,18 +30,14 @@
           v-for="(component, index) in contentOptions"
           :key="index"
           :is-desktop-layout="isDesktopLayout"
+          @open-form-modal="openFormModal"
         />
-        <CompanyTeam :is-desktop-layout="isDesktopLayout" />
+        <CompanyTeam @open-form-modal="openFormModal" />
       </template>
 
-      <CompanyTeam
-        v-if="isTeamModalShown"
-        class="application__team-modal"
-        :is-desktop-layout="isDesktopLayout"
-        @close-team-modal="closeTeamModal"
-      />
-
-      <ModalForm />
+      <div v-if="isFormModalShown" class="application__form-overlay">
+        <ModalForm class="application__form-modal" @close-form-modal="closeFormModal" />
+      </div>
     </main>
 
     <footer v-if="isDesktopLayout" class="application__footer" @click="openTeamModal">
@@ -50,6 +54,7 @@ export default {
     currentClientWidth: 0,
     currentContent: 'StartSection',
     isTeamModalShown: false,
+    isFormModalShown: false,
     contentOptions: [
       {
         componentName: 'StartSection',
@@ -105,6 +110,12 @@ export default {
     closeTeamModal () {
       this.isTeamModalShown = false
     },
+    openFormModal () {
+      this.isFormModalShown = true
+    },
+    closeFormModal () {
+      this.isFormModalShown = false
+    },
     onEscapeButton (event) {
       if (event.key === 'Escape' && this.isTeamModalShown) {
         this.closeTeamModal()
@@ -119,7 +130,6 @@ export default {
   height: 100vh;
   min-width: 320px;
   display: grid;
-  position: relative;
 }
 
 .application__header {
@@ -129,14 +139,41 @@ export default {
   transform: translateY(-50%);
 }
 
+.application__main {
+  position: relative;
+}
+
 .application__dynamic-content {
   min-height: 100vh;
   box-sizing: border-box;
 }
 
+.application__form-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.application__form-overlay {
+  content: '';
+  background-color: rgba(0, 54, 88, 0.51);
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  z-index: 20;
+}
+
 @media (min-width: 1218px) {
   .application {
     grid-template-columns: 1fr 86px;
+    position: relative;
+  }
+
+  .application__header {
+    z-index: 10;
   }
 
   .application__footer {
@@ -146,11 +183,10 @@ export default {
   .application__team-modal {
     position: absolute;
     background-color: white;
-    z-index: 20;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

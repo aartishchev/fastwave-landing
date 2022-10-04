@@ -27,7 +27,12 @@
           <p class="company-team__working-time">С 9 до 18 МСК</p>
         </div>
         <p class="company-team__or-phrase">или</p>
-        <button class="company-team__offer-button">Оставить заявку</button>
+        <button
+          class="company-team__offer-button"
+          @click="$emit('open-form-modal')"
+        >
+          Оставить заявку
+        </button>
       </div>
 
       <div>
@@ -64,13 +69,7 @@
 
 <script>
 export default {
-  props: {
-    isDesktopLayout: {
-      type: Boolean,
-      required: true
-    }
-  },
-  emits: ['close-team-modal'],
+  emits: ['close-team-modal', 'open-form-modal'],
   data: () => ({
     team: [
       {

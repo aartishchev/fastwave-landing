@@ -49,7 +49,12 @@
         Организуем весь спектр логистических услуг с полной страховкой
       </p>
 
-      <button class="start-page__contact-button">Перезвоните мне</button>
+      <button
+        class="start-page__contact-button"
+        @click="$emit('open-form-modal')"
+      >
+        Перезвоните мне
+      </button>
     </main>
   </section>
 </template>
@@ -61,7 +66,8 @@ export default {
       type: Boolean,
       required: true
     }
-  }
+  },
+  emits: ['open-form-modal']
 }
 </script>
 

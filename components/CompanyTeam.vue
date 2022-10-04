@@ -274,7 +274,7 @@ export default {
     transform: rotate(45deg);
   }
 
-  .company-team__close-button::before {
+  .company-team__close-button::before, .company-team__close-button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -284,12 +284,6 @@ export default {
   }
 
   .company-team__close-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #252827;
     transform: rotate(90deg);
   }
 }

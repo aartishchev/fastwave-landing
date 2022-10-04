@@ -1,6 +1,7 @@
 <template>
   <section class="modal-form">
     <h1 class="modal-form__heading">Написать нам</h1>
+
     <form class="modal-form__form" action="">
       <input class="modal-form__text-input" type="text" placeholder="Ваше имя">
       <input class="modal-form__text-input" type="text" placeholder="Ваш телефон">
@@ -20,6 +21,10 @@
       </div>
       <button class="modal-form__submit-button" type="submit">Отправить</button>
     </form>
+
+    <button class="modal-form__close-button">
+      <span class="sr-only">Закрыть модальное окно</span>
+    </button>
   </section>
 </template>
 
@@ -31,6 +36,7 @@
   background-color: white;
   border-radius: 10px;
   color: #252827;
+  position: relative;
 }
 
 .modal-form__heading {
@@ -110,5 +116,27 @@
   font-weight: 700;
   border-radius: 100px;
   margin-top: 10px;
+}
+
+.modal-form__close-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  transform: rotate(45deg);
+}
+
+.modal-form__close-button::before, .modal-form__close-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #174c6b;
+}
+
+.modal-form__close-button::after {
+  transform: rotate(90deg);
 }
 </style>

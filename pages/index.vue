@@ -29,11 +29,12 @@
       <CompanyTeam
         v-if="isTeamModalShown"
         class="application__team-modal"
-        @close-team-modal="toggleTeamModal"
+        :is-desktop-layout="isDesktopLayout"
+        @close-team-modal="closeTeamModal"
       />
     </main>
 
-    <footer v-if="isDesktopLayout" class="application__footer" @click="toggleTeamModal">
+    <footer v-if="isDesktopLayout" class="application__footer" @click="openTeamModal">
       <ContactBar />
     </footer>
   </div>
@@ -85,9 +86,11 @@ export default {
   mounted () {
     this.setWindowSize()
     window.addEventListener('resize', this.setWindowSize)
+    document.addEventListener('keydown', this.onEscapeButton)
   },
   beforeUnmount () {
     window.removeEventListener('resize', this.setWindowSize)
+    document.removeEventListener('keydown', this.onEscapeButton)
   },
   methods: {
     setCurrentContent (componentName) {
@@ -96,8 +99,16 @@ export default {
     setWindowSize () {
       this.currentClientWidth = window.innerWidth
     },
-    toggleTeamModal () {
-      this.isTeamModalShown = !this.isTeamModalShown
+    openTeamModal () {
+      this.isTeamModalShown = true
+    },
+    closeTeamModal () {
+      this.isTeamModalShown = false
+    },
+    onEscapeButton (event) {
+      if (event.key === 'Escape' && this.isTeamModalShown) {
+        this.closeTeamModal()
+      }
     }
   }
 }

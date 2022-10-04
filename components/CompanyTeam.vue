@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <button class="company-team__close-button" @click="$emit('close-team-modal')">
+    <button class="company-team__close-button" @click="$emit('close-team-modal')" @keydown.esc="alert('close')">
       <span class="sr-only">Закрыть окно с командой</span>
     </button>
   </section>

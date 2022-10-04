@@ -55,6 +55,10 @@
         </p>
       </div>
     </div>
+
+    <button class="company-team__close-button" @click="$emit('close-team-modal')">
+      <span class="sr-only">Закрыть окно с командой</span>
+    </button>
   </section>
 </template>
 
@@ -66,6 +70,7 @@ export default {
       required: true
     }
   },
+  emits: ['close-team-modal'],
   data: () => ({
     team: [
       {
@@ -211,6 +216,7 @@ export default {
 @media (min-width: 1218px) {
   .company-team {
     padding: 60px 30px 0px;
+    position: relative;
   }
 
   .company-team__header {
@@ -257,6 +263,34 @@ export default {
     font-size: 12px;
     line-height: 20px;
     letter-spacing: -0.5px;
+  }
+
+  .company-team__close-button {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+  }
+
+  .company-team__close-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #252827;
+  }
+
+  .company-team__close-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #252827;
+    transform: rotate(90deg);
   }
 }
 </style>

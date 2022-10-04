@@ -26,10 +26,14 @@
         <CompanyTeam />
       </template>
 
-      <CompanyTeam class="application__team-modal" />
+      <CompanyTeam
+        v-if="isTeamModalShown"
+        class="application__team-modal"
+        @close-team-modal="toggleTeamModal"
+      />
     </main>
 
-    <footer v-if="isDesktopLayout" class="application__footer">
+    <footer v-if="isDesktopLayout" class="application__footer" @click="toggleTeamModal">
       <ContactBar />
     </footer>
   </div>
@@ -44,6 +48,7 @@ export default {
     MIN_DESKTOP_VIEWPORT_WIDTH: 1218,
     currentClientWidth: 0,
     currentContent: 'StartSection',
+    isTeamModalShown: false,
     contentOptions: [
       {
         componentName: 'StartSection',
@@ -90,6 +95,9 @@ export default {
     },
     setWindowSize () {
       this.currentClientWidth = window.innerWidth
+    },
+    toggleTeamModal () {
+      this.isTeamModalShown = !this.isTeamModalShown
     }
   }
 }
@@ -122,6 +130,16 @@ export default {
 
   .application__footer {
     cursor: pointer;
+  }
+
+  .application__team-modal {
+    position: absolute;
+    background-color: white;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 </style>

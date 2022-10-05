@@ -95,6 +95,7 @@ export default {
 
 <style>
 .company-team {
+  font-family: 'Inter';
   padding: 60px 10px 50px;
   color: #252827;
 }
@@ -125,6 +126,7 @@ export default {
 }
 
 .company-team__name {
+  font-family: 'Montserrat';
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -185,6 +187,7 @@ export default {
 }
 
 .company-team__contacts {
+  font-family: 'Montserrat';
   display: grid;
   row-gap: 5px;
   font-size: 12px;
@@ -207,6 +210,7 @@ export default {
 }
 
 .company-team__condition {
+  font-family: 'Montserrat';
   font-size: 14px;
   line-height: 23px;
   letter-spacing: -0.5px;

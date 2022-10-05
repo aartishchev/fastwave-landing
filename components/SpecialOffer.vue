@@ -49,6 +49,7 @@ export default {
 
 <style>
   .special-offer {
+    font-family: 'Montserrat';
     padding: 60px 10px 50px;
     background-color: #252827;
   }
@@ -61,6 +62,7 @@ export default {
   }
 
   .special-offer__heading {
+    font-family: 'Inter';
     font-size: 32px;
     line-height: 38px;
     font-weight: 700;
@@ -94,8 +96,9 @@ export default {
   }
 
   .special-offer__image-description {
+    font-family: 'Inter';
     position: relative;
-    top: -10px;
+    top: -9px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
@@ -114,6 +117,7 @@ export default {
   }
 
   .special-offer__offer-button {
+    font-family: 'Inter';
     display: block;
     width: 160px;
     height: 53px;

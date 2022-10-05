@@ -68,12 +68,14 @@ export default {
 
 <style>
   .company-description {
+    font-family: 'Montserrat';
     padding: 60px 10px;
     background-color: #75b5e1;
     color: white;
   }
 
   .company-description__heading {
+    font-family: 'Inter';
     font-size: 24px;
     line-height: 29px;
     font-weight: 700;
@@ -136,6 +138,7 @@ export default {
   }
 
   .company-description__offer {
+    font-family: 'Inter';
     font-size: 40px;
     line-height: 48px;
     font-weight: 700;

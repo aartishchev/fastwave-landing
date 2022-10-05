@@ -27,6 +27,7 @@
 
 <style>
   .contact-bar {
+    font-family: 'Inter';
     height: 100%;
     box-shadow: 2px 0px 29px rgba(14, 74, 106, 0.21);
     padding-top: 300px;
@@ -38,6 +39,7 @@
     font-size: 20px;
     line-height: 29px;
     color: #252827;
+    font-weight: 400;
     text-transform: uppercase;
     transform-origin: top left;
     transform: rotate(270deg);

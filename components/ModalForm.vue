@@ -35,7 +35,9 @@ export default {
 
 <style>
 .modal-form {
+  font-family: 'Montserrat';
   max-width: 360px;
+  width: 100%;
   padding: 60px 30px 40px;
   box-sizing: border-box;
   background-color: white;
@@ -45,6 +47,7 @@ export default {
 }
 
 .modal-form__heading {
+  font-family: 'Inter';
   font-size: 32px;
   line-height: 38px;
   font-weight: 700;
@@ -112,6 +115,7 @@ export default {
 }
 
 .modal-form__submit-button {
+  font-family: 'Inter';
   width: 200px;
   height: 66px;
   color: white;

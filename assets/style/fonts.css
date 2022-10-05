@@ -10,6 +10,16 @@
 
 @font-face {
   font-family: 'Inter';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('@/assets/fonts/inter-v12-cyrillic-600.woff2') format('woff2'),
+    url('@/assets/fonts/inter-v12-cyrillic-600.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -57,5 +67,3 @@
     url('@/assets/fonts/montserrat-v25-cyrillic-regular.woff2') format('woff2'),
     url('@/assets/fonts/montserrat-v25-cyrillic-regular.woff') format('woff');
 }
-
-

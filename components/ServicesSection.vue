@@ -97,11 +97,13 @@ export default {
 
 <style>
 .services-page {
+  font-family: 'Montserrat';
   padding: 60px 10px 50px;
   color: #252827;
 }
 
 .services-page__heading {
+  font-family: 'Inter';
   font-size: 21px;
   line-height: 25px;
   font-weight: 700;
@@ -151,12 +153,12 @@ export default {
   .services-page__item-heading {
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.25px;
   }
 
   .services-page__item-text {
     font-size: 14px;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.25px;
   }
 
   .services-page__cubes {
@@ -181,9 +183,9 @@ export default {
     line-height: 16px;
     font-weight: 700;
     text-align: center;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.25px;
     text-transform: lowercase;
-    max-width: 70px
+    max-width: 100px
   }
 
   .services-page__cube-icon {

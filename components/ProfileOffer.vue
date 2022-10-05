@@ -118,10 +118,12 @@ export default {
 
 <style>
 .profile-offer {
+  font-family: 'Montserrat';
   padding: 60px 10px 50px;
 }
 
 .profile-offer__heading {
+  font-family: 'Inter';
   font-size: 24px;
   line-height: 29px;
   font-weight: 700;
@@ -214,6 +216,7 @@ export default {
 }
 
 .profile-offer__partners-heading {
+  font-family: 'Inter';
   font-size: 24px;
   line-height: 29px;
   font-weight: 700;

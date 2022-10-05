@@ -162,7 +162,7 @@ export default {
 }
 
 .application__form-modal {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -201,6 +201,11 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 10;
+  }
+
+  .application__form-modal {
+    position: absolute;
   }
 }
 </style>

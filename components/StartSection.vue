@@ -73,6 +73,7 @@ export default {
 
 <style>
 .start-page {
+  font-family: 'Inter';
   padding: 20px 10px;
   color: white;
   min-height: 705px;
@@ -118,7 +119,7 @@ export default {
 .start-page__heading {
   font-size: 32px;
   line-height: 38px;
-  font-weight: 700px;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
@@ -171,7 +172,6 @@ export default {
   .start-page__heading {
     font-size: 48px;
     line-height: 58px;
-    font-weight: 700px;
     margin-bottom: 40px;
   }
 

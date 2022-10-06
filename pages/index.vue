@@ -157,7 +157,7 @@ export default {
 }
 
 .application__dynamic-content {
-  min-height: 100vh;
+  height: 100%;
   box-sizing: border-box;
 }
 

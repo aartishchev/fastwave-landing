@@ -123,7 +123,7 @@ export default {
     height: 53px;
     margin: 0 auto;
     background-color: white;
-    opacity: 80%;
+    opacity: 0.8;
     border-radius: 80px;
     font-size: 13px;
     line-height: 16px;

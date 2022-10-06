@@ -194,7 +194,7 @@ export default {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .profile-offer__item:nth-child(2):before {

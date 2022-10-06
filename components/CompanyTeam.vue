@@ -219,7 +219,6 @@ export default {
 @media (min-width: 1218px) {
   .company-team {
     padding: 60px 30px 0px;
-    position: relative;
   }
 
   .company-team__header {

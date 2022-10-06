@@ -1,7 +1,7 @@
 <template>
   <section class="special-offer">
     <div class="special-offer__wrapper">
-      <div>
+      <div class="special-offer__text-wrapper">
         <h1 class="special-offer__heading">Майнеры – наша страсть!</h1>
         <p class="special-offer__description">Официальные поставки майнеров по дилерским ценам</p>
         <p class="special-offer__detail">
@@ -59,6 +59,10 @@ export default {
     flex-direction: column;
     row-gap: 50px;
     margin-bottom: 50px;
+  }
+
+  .special-offer__text-wrapper {
+    max-width: 360px;
   }
 
   .special-offer__heading {
@@ -138,7 +142,9 @@ export default {
 
     .special-offer__wrapper {
       flex-direction: row;
-      column-gap: 100px;
+      column-gap: 140px;
+      justify-content: center;
+
       margin-bottom: 60px;
     }
 
@@ -176,7 +182,8 @@ export default {
     .special-offer__offer-question {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
+      max-width: 400px;
     }
 
     .special-offer__offer-button {

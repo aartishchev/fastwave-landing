@@ -1,49 +1,49 @@
 <template>
   <section class="company-description">
-    <h1 class="company-description__heading">
-      Компания FASTWA<span class="company-description__heading-highlight">V</span>E сегодня
-    </h1>
-
-    <div class="company-description__content-wrapper">
-      <p class="company-description__definition">
-        FASTWAVE – логистическая компания,
-        которая предлагает комплексные решения по работе с поставщикамии доставке грузов из Китая
-      </p>
-      <p class="company-description__story">
-        Мы начали бизнес в 2017 году с одной задачи -
-        предлагать индивидуальные решения в сфере международной логистики и ВЭД.
-        Со временем к нашему проекту присоединились специалисты с богатым опытом работы
-        с китайскими поставщиками и понимаем особенностей менталитета этой страны.
-        Мы развивались с ними и благодаря их экспертизе в 2021 году решили сфокусироваться
-        на доставке грузов из Китая, поиск поставщиков по этому направлению и развитие отношений с ними.
-        Работая с нами, Вы получаете поддержку команды профессионалов которые работают
-        в единой системе ценностей компании «Ответственность. Надежность. Оперативность»
-      </p>
-      <ul class="company-description__features-list">
-        <li class="company-description__feature-item">работаем более 5 лет</li>
-        <li class="company-description__feature-item">2 страны присутствия</li>
-        <li class="company-description__feature-item">говорим на 3 языках</li>
-        <li class="company-description__feature-item">c нами работать просто</li>
-      </ul>
-    </div>
-
-    <div class="company-description__info-wrapper">
-      <div>
-        <p class="company-description__offer">Читайте нас в VK</p>
-        <span class="company-description__about">работаем более 5 лет</span>
-        <hr class="company-description__divider">
+    <div class="company-description__centering-wrapper">
+      <h1 class="company-description__heading">
+        Компания FASTWA<span class="company-description__heading-highlight">V</span>E сегодня
+      </h1>
+      <div class="company-description__content-wrapper">
+        <p class="company-description__definition">
+          FASTWAVE – логистическая компания,
+          которая предлагает комплексные решения по работе с поставщикамии доставке грузов из Китая
+        </p>
+        <p class="company-description__story">
+          Мы начали бизнес в 2017 году с одной задачи -
+          предлагать индивидуальные решения в сфере международной логистики и ВЭД.
+          Со временем к нашему проекту присоединились специалисты с богатым опытом работы
+          с китайскими поставщиками и понимаем особенностей менталитета этой страны.
+          Мы развивались с ними и благодаря их экспертизе в 2021 году решили сфокусироваться
+          на доставке грузов из Китая, поиск поставщиков по этому направлению и развитие отношений с ними.
+          Работая с нами, Вы получаете поддержку команды профессионалов которые работают
+          в единой системе ценностей компании «Ответственность. Надежность. Оперативность»
+        </p>
+        <ul class="company-description__features-list">
+          <li class="company-description__feature-item">работаем более 5 лет</li>
+          <li class="company-description__feature-item">2 страны присутствия</li>
+          <li class="company-description__feature-item">говорим на 3 языках</li>
+          <li class="company-description__feature-item">c нами работать просто</li>
+        </ul>
       </div>
-      <ul class="company-description__images-list">
-        <li v-for="(image, index) in descriptionImages" :key="index">
-          <img
-            class="company-description__image-item"
-            :width="isDesktopLayout ? 205 : 300"
-            :height="isDesktopLayout ? 158 : 232"
-            :src="require(`~/assets/images/${image}.jpg`)"
-            alt="фото команды"
-          >
-        </li>
-      </ul>
+      <div class="company-description__info-wrapper">
+        <div class="company-description__offer-wrapper">
+          <p class="company-description__offer">Читайте нас в VK</p>
+          <span class="company-description__about">работаем более 5 лет</span>
+          <hr class="company-description__divider">
+        </div>
+        <ul class="company-description__images-list">
+          <li v-for="(image, index) in descriptionImages" :key="index">
+            <img
+              class="company-description__image-item"
+              :width="isDesktopLayout ? 205 : 300"
+              :height="isDesktopLayout ? 158 : 232"
+              :src="require(`~/assets/images/${image}.jpg`)"
+              alt="фото команды"
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
@@ -72,6 +72,11 @@ export default {
     padding: 60px 10px;
     background-color: #75b5e1;
     color: white;
+  }
+
+  .company-description__centering-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .company-description__heading {
@@ -133,8 +138,13 @@ export default {
   }
 
   .company-description__info-wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     row-gap: 30px;
+  }
+
+  .company-description__offer-wrapper {
+    max-width: 260px;
   }
 
   .company-description__offer {
@@ -142,7 +152,7 @@ export default {
     font-size: 40px;
     line-height: 48px;
     font-weight: 700;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
   }
 
   .company-description__about {
@@ -163,7 +173,6 @@ export default {
   }
 
   .company-description__divider {
-    width: 260px;
     height: 1px;
     background-color: white;
     border: none;
@@ -215,7 +224,8 @@ export default {
     }
 
     .company-description__info-wrapper {
-      grid-template-columns: 1fr auto;
+      flex-direction: row;
+      column-gap: 40px;
     }
 
     .company-description__images-list {

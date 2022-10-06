@@ -28,14 +28,18 @@
 <style>
   .contact-bar {
     font-family: 'Inter';
+    position: relative;
     height: 100%;
     box-shadow: 2px 0px 29px rgba(14, 74, 106, 0.21);
-    padding-top: 300px;
-    padding-left: 15px;
-    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
   }
 
   .contact-bar__heading {
+    position: absolute;
+    top: 55%;
+    left: 15px;
     font-size: 20px;
     line-height: 29px;
     color: #252827;
@@ -48,8 +52,9 @@
   .contact-bar__social {
     display: grid;
     row-gap: 12px;
-    margin-left: 5px;
-    margin-top: 180px;
+    margin-left: 20px;
+    grid-row-start: 3;
+
   }
 
   .contact-bar__social-link {

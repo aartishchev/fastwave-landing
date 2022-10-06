@@ -191,7 +191,7 @@ export default {
 
   .application__footer {
     cursor: pointer;
-    width: 86px;
+    width: 70px;
   }
 
   .application__team-modal {

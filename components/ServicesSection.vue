@@ -135,7 +135,9 @@ export default {
 
 @media (min-width: 1218px) {
   .services-page {
-    padding: 60px 40px 60px 130px;
+    padding: 60px 40px 40px 130px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .services-page__heading {
@@ -145,9 +147,9 @@ export default {
   }
 
   .services-page__list {
-    grid-template-columns: repeat(2, minmax(0, 400px));
-    row-gap: 40px;
-    column-gap: 60px
+    grid-template-columns: repeat(2, minmax(0, 600px));
+    row-gap: 20px;
+    column-gap: 40px;
   }
 
   .services-page__item-heading {

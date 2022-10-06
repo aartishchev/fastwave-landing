@@ -121,12 +121,14 @@ export default {
   line-height: 38px;
   font-weight: 700;
   margin-bottom: 30px;
+  max-width: 660px;
 }
 
 .start-page__description {
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 30px;
+  max-width: 460px;
 }
 
 .start-page__contact-button {

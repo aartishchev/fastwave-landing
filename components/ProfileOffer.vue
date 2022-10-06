@@ -150,6 +150,7 @@ export default {
   font-weight: 700;
   letter-spacing: -0.25px;
   margin-bottom: 30px;
+  max-width: 310px;
 }
 
 .profile-offer__divider {
@@ -162,6 +163,7 @@ export default {
   font-size: 14px;
   line-height: 23px;
   letter-spacing: -0.25px;
+  max-width: 330px;
 }
 
 .profile-offer__list {
@@ -212,6 +214,7 @@ export default {
   line-height: 21px;
   font-weight: 500;
   letter-spacing: -0.25px;
+  padding: 0 10px;
   z-index: 10;
 }
 
@@ -239,6 +242,8 @@ export default {
 @media (min-width: 1218px) {
   .profile-offer {
     padding: 60px 80px 60px 130px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .profile-offer__heading {

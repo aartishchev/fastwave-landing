@@ -115,7 +115,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 38px;
   margin-bottom: 60px;
 }
 

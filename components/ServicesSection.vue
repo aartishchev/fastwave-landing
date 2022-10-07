@@ -135,7 +135,7 @@ export default {
 
 @media (min-width: 1218px) {
   .services-page {
-    padding: 60px 40px 40px 130px;
+    padding: 60px 40px 0 130px;
     max-width: 1200px;
     margin: 0 auto;
   }

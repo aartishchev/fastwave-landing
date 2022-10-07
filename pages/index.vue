@@ -109,6 +109,10 @@ export default {
       this.currentClientWidth = window.innerWidth
     },
     openTeamModal () {
+      if (this.isFormModalShown) {
+        return
+      }
+
       this.isTeamModalShown = true
     },
     closeTeamModal () {

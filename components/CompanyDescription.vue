@@ -4,11 +4,13 @@
       <h1 class="company-description__heading">
         Компания FASTWA<span class="company-description__heading-highlight">V</span>E сегодня
       </h1>
+
       <div class="company-description__content-wrapper">
         <p class="company-description__definition">
           FASTWAVE – логистическая компания,
           которая предлагает комплексные решения по работе с поставщикамии доставке грузов из Китая
         </p>
+
         <p class="company-description__story">
           Мы начали бизнес в 2017 году с одной задачи -
           предлагать индивидуальные решения в сфере международной логистики и ВЭД.
@@ -19,6 +21,7 @@
           Работая с нами, Вы получаете поддержку команды профессионалов которые работают
           в единой системе ценностей компании «Ответственность. Надежность. Оперативность»
         </p>
+
         <ul class="company-description__features-list">
           <li class="company-description__feature-item">работаем более 5 лет</li>
           <li class="company-description__feature-item">2 страны присутствия</li>
@@ -26,6 +29,7 @@
           <li class="company-description__feature-item">c нами работать просто</li>
         </ul>
       </div>
+
       <div class="company-description__info-wrapper">
         <div class="company-description__offer-wrapper">
           <p class="company-description__offer">Читайте нас в VK</p>
@@ -202,14 +206,13 @@ export default {
     .company-description__content-wrapper {
       grid-template-columns: 540px auto;
       row-gap: 32px;
-      column-gap: 70px;
+      column-gap: 76px;
       margin-bottom: 80px;
     }
 
     .company-description__definition {
       font-size: 17px;
       line-height: 26px;
-      margin-bottom: 30px;
     }
 
     .company-description__story {

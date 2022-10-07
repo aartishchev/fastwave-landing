@@ -241,7 +241,7 @@ export default {
 
 @media (min-width: 1218px) {
   .profile-offer {
-    padding: 60px 80px 60px 130px;
+    padding: 60px 80px 0 130px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -249,7 +249,7 @@ export default {
   .profile-offer__heading {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   .profile-offer__content-wrapper {

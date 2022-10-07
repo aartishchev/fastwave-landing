@@ -6,6 +6,7 @@
         <br>
         <span class="company-team__header-highlight">Мы работаем вместе</span>
       </h1>
+
       <ul class="company-team__list">
         <li v-for="(member, index) in team" :key="index">
           <img
@@ -18,18 +19,19 @@
           <p class="company-team__name">{{ member.name }}</p>
         </li>
       </ul>
+
       <div class="company-team__wrapper">
         <div class="company-team__social">
           <p class="company-team__offer">Свяжитесь с нами по телефону</p>
+
           <div class="company-team__inside-wrapper">
             <a class="company-team__telnumber" href="tel:84957951326">+7(495)7951326</a>
             <p class="company-team__working-time">С 9 до 18 МСК</p>
           </div>
+
           <p class="company-team__or-phrase">или</p>
-          <button
-            class="company-team__offer-button"
-            @click="$emit('open-form-modal')"
-          >
+
+          <button class="company-team__offer-button" @click="$emit('open-form-modal')">
             Оставить заявку
           </button>
         </div>
@@ -38,6 +40,7 @@
             <p>
               Почта:<a class="company-team__email" href="mailto:hello@fastwave.ru">hello@fastwave.ru</a>
             </p>
+
             <p class="company-team__messengers-wrapper">
               <span>Мессенджеры:</span>
               <a>
@@ -57,7 +60,12 @@
           </p>
         </div>
       </div>
-      <button class="company-team__close-button" @click="$emit('close-team-modal')" @keydown.esc="alert('close')">
+
+      <button
+        class="company-team__close-button"
+        @click="$emit('close-team-modal')"
+        @keydown.esc="alert('close')"
+      >
         <span class="sr-only">Закрыть окно с командой</span>
       </button>
     </div>

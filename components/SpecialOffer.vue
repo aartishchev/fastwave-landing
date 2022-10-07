@@ -80,7 +80,7 @@ export default {
     font-weight: 700;
     letter-spacing: -0.25px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 
   .special-offer__detail {
@@ -137,7 +137,7 @@ export default {
 
   @media (min-width: 1218px) {
     .special-offer {
-      padding: 110px 0px 70px 130px;
+      padding: 110px 0 0 130px;
     }
 
     .special-offer__wrapper {

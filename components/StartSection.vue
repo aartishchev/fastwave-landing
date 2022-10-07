@@ -143,7 +143,7 @@ export default {
 
 @media (min-width: 1218px) {
   .start-page {
-    padding: 40px 30px;
+    padding: 40px 30px 0;
     min-height: auto;
     background-image:
       url('~assets/images/start-desktop-bg.jpg'),

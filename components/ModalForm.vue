@@ -6,6 +6,7 @@
       <input class="modal-form__text-input" type="text" placeholder="Ваше имя">
       <input class="modal-form__text-input" type="text" placeholder="Ваш телефон">
       <input class="modal-form__text-input" type="text" placeholder="Ваш E-mail">
+
       <div>
         <input
           id="checkbox-accepted"
@@ -18,6 +19,7 @@
           Я соглашаюсь с политикой конфиденциальности
         </label>
       </div>
+
       <button class="modal-form__submit-button" type="submit">Отправить</button>
     </form>
 

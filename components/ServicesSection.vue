@@ -5,6 +5,7 @@
       <span class="services-page__highlight">Экспертная</span>
       логистика и снабжение
     </h1>
+
     <ul class="services-page__list">
       <li v-for="(item, index) in items" :key="index">
         <h2 class="services-page__item-heading">{{ item.heading }}</h2>
@@ -21,6 +22,7 @@
         >
         <p class="services-page__secret-title">Без <br> предоплаты</p>
       </li>
+
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon"
@@ -31,6 +33,7 @@
         >
         <p class="services-page__secret-title">Грузы <br> от 30кг</p>
       </li>
+
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon"
@@ -41,6 +44,7 @@
         >
         <p class="services-page__secret-title">Гарантия сроков поставки</p>
       </li>
+
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon"
@@ -51,6 +55,7 @@
         >
         <p class="services-page__secret-title">Без скрытых платежей</p>
       </li>
+
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon-logo"

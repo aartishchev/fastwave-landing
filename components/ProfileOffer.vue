@@ -255,7 +255,7 @@ export default {
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
 
   .profile-offer__text {

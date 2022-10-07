@@ -1,69 +1,66 @@
 <template>
   <section class="company-team">
-    <h1 class="company-team__header">
-      Люди - наша ценность.
-      <br>
-      <span class="company-team__header-highlight">Мы работаем вместе</span>
-    </h1>
-
-    <ul class="company-team__list">
-      <li v-for="(member, index) in team" :key="index">
-        <img
-          class="company-team__image"
-          width="260"
-          height="230"
-          :src="require(`~/assets/images/${member.image}.jpg`)"
-          alt="Фото участника команды"
-        >
-        <p class="company-team__name">{{ member.name }}</p>
-      </li>
-    </ul>
-
-    <div class="company-team__wrapper">
-      <div class="company-team__social">
-        <p class="company-team__offer">Свяжитесь с нами по телефону</p>
-        <div class="company-team__inside-wrapper">
-          <a class="company-team__telnumber" href="tel:84957951326">+7(495)7951326</a>
-          <p class="company-team__working-time">С 9 до 18 МСК</p>
+    <div class="company-team__centering-wrapper">
+      <h1 class="company-team__header">
+        Люди - наша ценность.
+        <br>
+        <span class="company-team__header-highlight">Мы работаем вместе</span>
+      </h1>
+      <ul class="company-team__list">
+        <li v-for="(member, index) in team" :key="index">
+          <img
+            class="company-team__image"
+            width="260"
+            height="230"
+            :src="require(`~/assets/images/${member.image}.jpg`)"
+            alt="Фото участника команды"
+          >
+          <p class="company-team__name">{{ member.name }}</p>
+        </li>
+      </ul>
+      <div class="company-team__wrapper">
+        <div class="company-team__social">
+          <p class="company-team__offer">Свяжитесь с нами по телефону</p>
+          <div class="company-team__inside-wrapper">
+            <a class="company-team__telnumber" href="tel:84957951326">+7(495)7951326</a>
+            <p class="company-team__working-time">С 9 до 18 МСК</p>
+          </div>
+          <p class="company-team__or-phrase">или</p>
+          <button
+            class="company-team__offer-button"
+            @click="$emit('open-form-modal')"
+          >
+            Оставить заявку
+          </button>
         </div>
-        <p class="company-team__or-phrase">или</p>
-        <button
-          class="company-team__offer-button"
-          @click="$emit('open-form-modal')"
-        >
-          Оставить заявку
-        </button>
-      </div>
-
-      <div>
-        <div class="company-team__contacts">
-          <p>
-            Почта:<a class="company-team__email" href="mailto:hello@fastwave.ru">hello@fastwave.ru</a>
-          </p>
-          <p class="company-team__messengers-wrapper">
-            <span>Мессенджеры:</span>
-            <a>
-              <span class="sr-only">Ссылка на канал в Telegram</span>
-              <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
-            </a>
-            <a>
-              <span class="sr-only">Ссылка на канал в WhatsApp</span>
-              <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
-            </a>
+        <div>
+          <div class="company-team__contacts">
+            <p>
+              Почта:<a class="company-team__email" href="mailto:hello@fastwave.ru">hello@fastwave.ru</a>
+            </p>
+            <p class="company-team__messengers-wrapper">
+              <span>Мессенджеры:</span>
+              <a>
+                <span class="sr-only">Ссылка на канал в Telegram</span>
+                <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
+              </a>
+              <a>
+                <span class="sr-only">Ссылка на канал в WhatsApp</span>
+                <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
+              </a>
+            </p>
+          </div>
+          <p class="company-team__condition">
+            Для обсуждения проектов мы предпочитаем личное общение,
+            поэтому готовы приехать к вам или пригласить в наш офис по адресу:
+            Москва Город,ул. Малая Семёновская, д. 30, офис 213а
           </p>
         </div>
-
-        <p class="company-team__condition">
-          Для обсуждения проектов мы предпочитаем личное общение,
-          поэтому готовы приехать к вам или пригласить в наш офис по адресу:
-          Москва Город,ул. Малая Семёновская, д. 30, офис 213а
-        </p>
       </div>
+      <button class="company-team__close-button" @click="$emit('close-team-modal')" @keydown.esc="alert('close')">
+        <span class="sr-only">Закрыть окно с командой</span>
+      </button>
     </div>
-
-    <button class="company-team__close-button" @click="$emit('close-team-modal')" @keydown.esc="alert('close')">
-      <span class="sr-only">Закрыть окно с командой</span>
-    </button>
   </section>
 </template>
 
@@ -98,6 +95,12 @@ export default {
   font-family: 'Inter';
   padding: 60px 10px 50px;
   color: #252827;
+}
+
+.company-team__centering-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .company-team__header {
@@ -227,7 +230,8 @@ export default {
   }
 
   .company-team__list {
-    margin-bottom: 140px;
+    margin-bottom: 100px;
+    justify-content: space-between;
   }
 
   .company-team__wrapper {
@@ -269,8 +273,8 @@ export default {
 
   .company-team__close-button {
     position: absolute;
-    top: 70px;
-    right: 30px;
+    top: 0;
+    right: 0;
     width: 40px;
     height: 40px;
     transform: rotate(45deg);

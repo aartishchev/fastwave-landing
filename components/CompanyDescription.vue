@@ -5,12 +5,12 @@
         Компания FASTWA<span class="company-description__heading-highlight">V</span>E сегодня
       </h1>
 
-      <div class="company-description__content-wrapper">
-        <p class="company-description__definition">
-          FASTWAVE – логистическая компания,
-          которая предлагает комплексные решения по работе с поставщикамии доставке грузов из Китая
-        </p>
+      <p class="company-description__definition">
+        FASTWAVE – логистическая компания,
+        которая предлагает комплексные решения по работе с поставщикамии доставке грузов из Китая
+      </p>
 
+      <div class="company-description__content-wrapper">
         <p class="company-description__story">
           Мы начали бизнес в 2017 году с одной задачи -
           предлагать индивидуальные решения в сфере международной логистики и ВЭД.
@@ -78,11 +78,6 @@ export default {
     color: white;
   }
 
-  .company-description__centering-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   .company-description__heading {
     font-family: 'Inter';
     font-size: 24px;
@@ -95,24 +90,28 @@ export default {
     color: #00f2ff;
   }
 
-  .company-description__content-wrapper {
-    display: grid;
-    row-gap: 32px;
-    row-gap: 40px;
-    margin-bottom: 50px
-  }
-
   .company-description__definition {
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
     letter-spacing: -0.5px;
+    max-width: 540px;
+    margin-bottom: 40px;
+  }
+
+  .company-description__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    row-gap: 40px;
+    column-gap: 76px;
   }
 
   .company-description__story {
     font-size: 12px;
     line-height: 20px;
     font-weight: 500;
+    max-width: 540px;
   }
 
   .company-description__features-list {
@@ -184,8 +183,10 @@ export default {
   }
 
   .company-description__images-list {
-    display: grid;
-    row-gap: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    justify-content: center;
   }
 
   .company-description__image-item {
@@ -198,21 +199,25 @@ export default {
       padding: 60px 40px 0px 130px;
     }
 
+    .company-description__centering-wrapper {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
     .company-description__heading {
       font-size: 40px;
       line-height: 48px;
     }
 
-    .company-description__content-wrapper {
-      grid-template-columns: 540px auto;
-      row-gap: 32px;
-      column-gap: 76px;
-      margin-bottom: 80px;
-    }
-
     .company-description__definition {
       font-size: 17px;
       line-height: 26px;
+      margin-bottom: 32px;
+    }
+
+    .company-description__content-wrapper {
+      row-gap: 32px;
+      margin-bottom: 80px;
     }
 
     .company-description__story {
@@ -232,7 +237,6 @@ export default {
     }
 
     .company-description__images-list {
-      display: flex;
       column-gap: 22px;
     }
 

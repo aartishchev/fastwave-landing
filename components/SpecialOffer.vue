@@ -56,8 +56,9 @@ export default {
 
   .special-offer__wrapper {
     display: flex;
-    flex-direction: column;
-    row-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
     margin-bottom: 50px;
   }
 
@@ -117,7 +118,8 @@ export default {
     letter-spacing: -0.25px;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 0 auto 20px;
   }
 
   .special-offer__offer-button {
@@ -143,8 +145,6 @@ export default {
     .special-offer__wrapper {
       flex-direction: row;
       column-gap: 140px;
-      justify-content: center;
-
       margin-bottom: 60px;
     }
 
@@ -183,7 +183,7 @@ export default {
       font-size: 16px;
       line-height: 24px;
       margin: 0 auto 30px;
-      max-width: 400px;
+
     }
 
     .special-offer__offer-button {

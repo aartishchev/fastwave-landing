@@ -122,6 +122,8 @@ export default {
 .profile-offer {
   font-family: 'Montserrat';
   padding: 60px 10px 50px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .profile-offer__heading {
@@ -152,7 +154,6 @@ export default {
   font-weight: 700;
   letter-spacing: -0.25px;
   margin-bottom: 30px;
-  max-width: 310px;
 }
 
 .profile-offer__divider {
@@ -165,7 +166,6 @@ export default {
   font-size: 14px;
   line-height: 23px;
   letter-spacing: -0.25px;
-  max-width: 330px;
 }
 
 .profile-offer__list {
@@ -245,7 +245,6 @@ export default {
   .profile-offer {
     padding: 60px 80px 0 130px;
     max-width: 1200px;
-    margin: 0 auto;
   }
 
   .profile-offer__heading {
@@ -263,11 +262,13 @@ export default {
   .profile-offer__text {
     font-size: 16px;
     line-height: 24px;
+    max-width: 310px;
   }
 
   .profile-offer__description {
     font-size: 16px;
     line-height: 20px;
+    max-width: 330px;
   }
 
   .profile-offer__list {

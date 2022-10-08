@@ -105,6 +105,8 @@ export default {
   font-family: 'Montserrat';
   padding: 60px 10px 50px;
   color: #252827;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .services-page__heading {
@@ -142,7 +144,6 @@ export default {
   .services-page {
     padding: 60px 40px 0 130px;
     max-width: 1200px;
-    margin: 0 auto;
   }
 
   .services-page__heading {
@@ -177,12 +178,18 @@ export default {
   .services-page__secret-cube {
     display: flex;
     flex-direction: column;
+    padding-top: 75px;
+    box-sizing: border-box;
     align-items: center;
-    justify-content: center;
     row-gap: 10px;
     width: 190px;
     height: 248px;
     background-image: url('~assets/images/cyan-cube.png');
+  }
+
+  .services-page__secret-cube:last-child {
+    padding: 0;
+    justify-content: center;
   }
 
   .services-page__secret-title {

@@ -78,6 +78,11 @@ export default {
     color: white;
   }
 
+  .company-description__centering-wrapper {
+    margin: 0 auto;
+    max-width: 934px;
+  }
+
   .company-description__heading {
     font-family: 'Inter';
     font-size: 24px;
@@ -200,7 +205,6 @@ export default {
     }
 
     .company-description__centering-wrapper {
-      margin: 0 auto;
       max-width: 1200px;
     }
 

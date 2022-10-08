@@ -36,7 +36,9 @@
       </template>
 
       <div v-if="isFormModalShown" class="application__form-overlay">
-        <ModalForm class="application__form-modal" @close-form-modal="closeFormModal" />
+        <div class="application__form-modal-wrapper">
+          <ModalForm @close-form-modal="closeFormModal" />
+        </div>
       </div>
     </main>
 
@@ -165,7 +167,7 @@ export default {
   box-sizing: border-box;
 }
 
-.application__form-modal {
+.application__form-modal-wrapper {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -208,7 +210,7 @@ export default {
     z-index: 10;
   }
 
-  .application__form-modal {
+  .application__form-modal-wrapper {
     position: absolute;
   }
 }

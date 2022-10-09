@@ -8,18 +8,21 @@
         class="modal-form__text-input"
         type="text"
         placeholder="Ваше имя"
+        maxlenth="50"
       >
       <input
         v-model="formData.phone"
         class="modal-form__text-input"
         type="text"
         placeholder="Ваш телефон"
+        maxlenth="50"
       >
       <input
         v-model="formData.email"
         class="modal-form__text-input"
         type="text"
         placeholder="Ваш E-mail"
+        maxlenth="50"
       >
 
       <div>

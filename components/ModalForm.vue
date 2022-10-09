@@ -2,21 +2,21 @@
   <section class="modal-form">
     <h1 class="modal-form__heading">Написать нам</h1>
 
-    <form class="modal-form__form" action="">
+    <form action="#" class="modal-form__form" @submit.prevent="submitForm">
       <input
-        v-model="name"
+        v-model="formData.name"
         class="modal-form__text-input"
         type="text"
         placeholder="Ваше имя"
       >
       <input
-        v-model="phone"
+        v-model="formData.phone"
         class="modal-form__text-input"
         type="text"
         placeholder="Ваш телефон"
       >
       <input
-        v-model="email"
+        v-model="formData.email"
         class="modal-form__text-input"
         type="text"
         placeholder="Ваш E-mail"
@@ -72,6 +72,25 @@ export default {
         this.formData.length
 
       return areInputsFilled && this.acceptance
+    }
+  },
+  methods: {
+    async submitForm () {
+      const formData = new FormData()
+
+      for (const [key, value] of Object.entries(this.formData)) {
+        formData.append(key, value)
+      }
+
+      const response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      })
+      if (response.ok) {
+        console.log(response)
+      } else {
+        console.log(response)
+      }
     }
   }
 }

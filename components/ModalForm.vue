@@ -56,15 +56,21 @@ export default {
   emits: ['close-form-modal'],
   data () {
     return {
-      name: '',
-      phone: '',
-      email: '',
+      formData: {
+        name: '',
+        phone: '',
+        email: ''
+      },
       acceptance: false
     }
   },
   computed: {
     isValid () {
-      const areInputsFilled = this.name.length || this.phone.length || this.email.length
+      const areInputsFilled =
+        this.formData.name.length ||
+        this.formData.length ||
+        this.formData.length
+
       return areInputsFilled && this.acceptance
     }
   }

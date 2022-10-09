@@ -3,13 +3,29 @@
     <h1 class="modal-form__heading">Написать нам</h1>
 
     <form class="modal-form__form" action="">
-      <input class="modal-form__text-input" type="text" placeholder="Ваше имя">
-      <input class="modal-form__text-input" type="text" placeholder="Ваш телефон">
-      <input class="modal-form__text-input" type="text" placeholder="Ваш E-mail">
+      <input
+        v-model="name"
+        class="modal-form__text-input"
+        type="text"
+        placeholder="Ваше имя"
+      >
+      <input
+        v-model="phone"
+        class="modal-form__text-input"
+        type="text"
+        placeholder="Ваш телефон"
+      >
+      <input
+        v-model="email"
+        class="modal-form__text-input"
+        type="text"
+        placeholder="Ваш E-mail"
+      >
 
       <div>
         <input
           id="checkbox-accepted"
+          v-model="acceptance"
           class="modal-form__checkbox sr-only"
           type="checkbox"
           name="checkbox-accepted"
@@ -20,7 +36,13 @@
         </label>
       </div>
 
-      <button class="modal-form__submit-button" type="submit">Отправить</button>
+      <button
+        class="modal-form__submit-button"
+        type="submit"
+        :disabled="!isValid"
+      >
+        Отправить
+      </button>
     </form>
 
     <button class="modal-form__close-button" @click="$emit('close-form-modal')">
@@ -31,15 +53,28 @@
 
 <script>
 export default {
-  emits: ['close-form-modal']
+  emits: ['close-form-modal'],
+  data () {
+    return {
+      name: '',
+      phone: '',
+      email: '',
+      acceptance: false
+    }
+  },
+  computed: {
+    isValid () {
+      const areInputsFilled = this.name.length || this.phone.length || this.email.length
+      return areInputsFilled && this.acceptance
+    }
+  }
 }
 </script>
 
 <style>
 .modal-form {
   font-family: 'Montserrat';
-  max-width: 360px;
-  width: 100%;
+  width: 320px;
   padding: 60px 30px 40px;
   box-sizing: border-box;
   background-color: white;
@@ -129,6 +164,11 @@ export default {
   margin-top: 10px;
 }
 
+.modal-form__submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .modal-form__close-button {
   position: absolute;
   width: 20px;
@@ -149,5 +189,11 @@ export default {
 
 .modal-form__close-button::after {
   transform: rotate(90deg);
+}
+
+@media (min-width: 1218px) {
+  .modal-form {
+    width: 360px;
+  }
 }
 </style>

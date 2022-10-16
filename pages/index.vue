@@ -4,7 +4,7 @@
       <NavBar
         :active-component="currentContent"
         :nav-items="contentOptions"
-        @set-content="setCurrentContent"
+        @set-content="setContentOnClick"
       />
     </header>
 
@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import debounce from 'lodash.debounce'
+
 export default {
   name: 'IndexPage',
   data: () => ({
@@ -98,15 +100,19 @@ export default {
     this.setWindowSize()
     window.addEventListener('resize', this.setWindowSize)
     document.addEventListener('keydown', this.onEscapeButton)
+    window.addEventListener('wheel', this.debouncedHander)
   },
   beforeUnmount () {
     window.removeEventListener('resize', this.setWindowSize)
     document.removeEventListener('keydown', this.onEscapeButton)
+    window.removeEventListener('wheel', this.debouncedHander)
+  },
+  created () {
+    this.debouncedHander = debounce((event) => {
+      this.setContentOnWheel(event)
+    }, 200)
   },
   methods: {
-    setCurrentContent (componentName) {
-      this.currentContent = componentName
-    },
     setWindowSize () {
       this.currentClientWidth = window.innerWidth
     },
@@ -138,6 +144,30 @@ export default {
 
       if (this.isTeamModalShown) {
         this.closeTeamModal()
+      }
+    },
+    setContentOnClick (componentName) {
+      this.currentContent = componentName
+    },
+    setContentOnWheel (event) {
+      if (!this.isDesktopLayout) {
+        return
+      }
+
+      const currentComponentIndex = this.contentOptions.findIndex(
+        option => option.componentName === this.currentContent
+      )
+
+      if (event.deltaY > 0) {
+        if (currentComponentIndex === this.contentOptions.length - 1) {
+          this.currentContent = this.contentOptions[0].componentName
+        } else {
+          this.currentContent = this.contentOptions[currentComponentIndex + 1].componentName
+        }
+      } else if (currentComponentIndex === 0) {
+        this.currentContent = this.contentOptions.at(-1).componentName
+      } else {
+        this.currentContent = this.contentOptions[currentComponentIndex - 1].componentName
       }
     }
   }
@@ -178,10 +208,10 @@ export default {
   content: '';
   background-color: rgba(0, 54, 88, 0.51);
   position: absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:100%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   z-index: 20;
 }
 

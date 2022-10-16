@@ -150,7 +150,7 @@ export default {
       this.currentContent = componentName
     },
     setContentOnWheel (event) {
-      if (!this.isDesktopLayout) {
+      if (!this.isDesktopLayout || this.isFormModalShown || this.isTeamModalShown) {
         return
       }
 

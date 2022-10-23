@@ -192,6 +192,10 @@ export default {
   margin-top: 10px;
 }
 
+.modal-form__submit-button:hover {
+  opacity: 0.5;
+}
+
 .modal-form__submit-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -204,6 +208,10 @@ export default {
   top: 20px;
   right: 20px;
   transform: rotate(45deg);
+}
+
+.modal-form__close-button:hover {
+  opacity: 0.5;
 }
 
 .modal-form__close-button::before, .modal-form__close-button::after {

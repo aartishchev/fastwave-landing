@@ -3,8 +3,8 @@
     <header class="start-page__header">
       <img
         class="start-page__logo"
-        src="@/assets/images/logo.png"
-        :width="isDesktopLayout ? 160 : 80"
+        src="@/assets/images/logo-transparent.png"
+        :width="isDesktopLayout ? 240 : 60"
         :height="isDesktopLayout ? 40 : 20"
         alt="Логотип"
       >
@@ -157,8 +157,8 @@ export default {
   }
 
   .start-page__logo {
-    width: 160px;
-    height: 40px;
+    width: 240px;
+    height: 60px;
   }
 
   .start-page__motto {
@@ -189,6 +189,10 @@ export default {
     border-radius: 100px;
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .start-page__contact-button:hover {
+    opacity: 0.5;
   }
 }
 </style>

@@ -160,6 +160,7 @@ export default {
   display: grid;
   text-align: center;
   row-gap: 10px;
+  margin-bottom: 50px;
 }
 
 .company-team__offer {
@@ -258,6 +259,7 @@ export default {
   .company-team__social {
     flex: none;
     text-align: left;
+    margin-bottom: 0;
   }
 
   .company-team__offer-button {
@@ -267,6 +269,10 @@ export default {
     border-radius: 100px;
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .company-team__offer-button:hover {
+    background-color: rgba(103, 178, 221, 0.5);
   }
 
   .company-team__contacts {
@@ -286,6 +292,10 @@ export default {
     width: 40px;
     height: 40px;
     transform: rotate(45deg);
+  }
+
+  .company-team__close-button:hover {
+    opacity: 0.5;
   }
 
   .company-team__close-button::before, .company-team__close-button::after {

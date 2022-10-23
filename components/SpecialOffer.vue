@@ -194,6 +194,10 @@ export default {
       font-size: 16px;
       line-height: 20px;
     }
+
+    .special-offer__offer-button:hover {
+      opacity: 0.5;
+    }
   }
 
   @media (min-width: 1500px) {

@@ -244,6 +244,12 @@ export default {
     justify-content: space-between;
   }
 
+  .company-team__image {
+    width: 230px;
+    height: 200px;
+    margin-bottom: 16px;
+  }
+
   .company-team__wrapper {
     flex-direction: row;
     column-gap: 190px;
@@ -260,6 +266,10 @@ export default {
     flex: none;
     text-align: left;
     margin-bottom: 0;
+  }
+
+  .company-team__or-phrase {
+    display: none;
   }
 
   .company-team__offer-button {
@@ -325,9 +335,18 @@ export default {
     margin-bottom: 100px;
   }
 
+  .company-team__image {
+    width: 260px;
+    height: 230px;
+  }
+
   .company-team__inside-wrapper {
     column-gap: 18px;
     margin-bottom: 10px;
+  }
+
+  .company-team__or-phrase {
+    display: block;
   }
 
   .company-team__offer-button {

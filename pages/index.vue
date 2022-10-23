@@ -196,6 +196,7 @@ export default {
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 .application__form-modal-wrapper {

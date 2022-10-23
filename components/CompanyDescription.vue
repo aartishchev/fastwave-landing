@@ -222,7 +222,7 @@ export default {
 
     .company-description__content-wrapper {
       row-gap: 32px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       max-width: 950px;
       justify-content: space-between;
     }
@@ -231,6 +231,7 @@ export default {
       font-size: 13px;
       line-height: 22px;
       grid-column-start: 1;
+      max-width: 680px;
     }
 
     .company-description__features-list {
@@ -268,6 +269,10 @@ export default {
 
     .company-description__content-wrapper {
       margin-bottom: 80px;
+    }
+
+    .company-description__story {
+      max-width: 540px;
     }
   }
 </style>

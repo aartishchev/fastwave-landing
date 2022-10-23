@@ -256,7 +256,7 @@ export default {
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   .profile-offer__text {
@@ -279,8 +279,8 @@ export default {
   }
 
   .profile-offer__item {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     font-size: 11px;
     line-height: 15px;
   }
@@ -311,6 +311,11 @@ export default {
 
   .profile-offer__content-wrapper {
     margin-bottom: 100px;
+  }
+
+  .profile-offer__item {
+    width: 180px;
+    height: 180px;
   }
 
   .profile-offer__partners-heading {

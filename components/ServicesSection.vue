@@ -13,7 +13,7 @@
       </li>
     </ul>
 
-    <ul v-if="isDesktopLayout" class="services-page__cubes">
+    <ul class="services-page__cubes">
       <li class="services-page__secret-cube">
         <img
           class="services-page__cube-icon"
@@ -140,9 +140,13 @@ export default {
   line-height: 20px;
 }
 
+.services-page__cubes {
+  display: none;
+}
+
 @media (min-width: 1218px) {
   .services-page {
-    padding: 60px 40px 0 130px;
+    padding: 30px 40px 0 130px;
     max-width: 1200px;
   }
 
@@ -167,6 +171,12 @@ export default {
   .services-page__item-text {
     font-size: 14px;
     letter-spacing: -0.25px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .services-page {
+    padding: 60px 40px 0 130px;
   }
 
   .services-page__cubes {

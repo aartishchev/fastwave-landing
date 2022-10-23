@@ -243,20 +243,20 @@ export default {
 
 @media (min-width: 1218px) {
   .profile-offer {
-    padding: 60px 80px 0 130px;
+    padding: 30px 80px 0 130px;
     max-width: 1200px;
   }
 
   .profile-offer__heading {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
   }
 
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .profile-offer__text {
@@ -292,13 +292,32 @@ export default {
   }
 
   .profile-offer__partners-heading {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 60px;
+    display: none;
   }
 
   .profile-offer__partners-list {
     gap: 30px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .profile-offer {
+    padding: 60px 80px 0 130px;
+  }
+
+  .profile-offer__heading {
+    margin-bottom: 70px;
+  }
+
+  .profile-offer__content-wrapper {
+    margin-bottom: 100px;
+  }
+
+  .profile-offer__partners-heading {
+    display: block;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 60px;
   }
 
   .profile-offer__partners-logo {

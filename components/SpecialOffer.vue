@@ -139,13 +139,13 @@ export default {
 
   @media (min-width: 1218px) {
     .special-offer {
-      padding: 110px 0 0 130px;
+      padding: 30px 0 0 130px;
     }
 
     .special-offer__wrapper {
       flex-direction: row;
       column-gap: 140px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     .special-offer__heading {
@@ -182,7 +182,8 @@ export default {
     .special-offer__offer-question {
       font-size: 16px;
       line-height: 24px;
-      margin: 0 auto 30px;
+      margin: 0 auto 15px;
+      max-width: 100%;
 
     }
 
@@ -192,6 +193,21 @@ export default {
       border-radius: 100px;
       font-size: 16px;
       line-height: 20px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .special-offer {
+      padding: 110px 0 0 130px;
+    }
+
+    .special-offer__wrapper {
+      margin-bottom: 60px;
+    }
+
+    .special-offer__offer-question {
+      margin: 0 auto 30px;
+      max-width: 400px;
     }
   }
 </style>

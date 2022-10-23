@@ -32,7 +32,7 @@
           <p class="company-team__or-phrase">или</p>
 
           <button class="company-team__offer-button" @click="$emit('open-form-modal')">
-            Оставить заявку
+            Оставьте заявку
           </button>
         </div>
         <div>
@@ -229,16 +229,17 @@ export default {
 
 @media (min-width: 1218px) {
   .company-team {
-    padding: 60px 30px 0px;
+    padding: 30px 30px 0px;
   }
 
   .company-team__header {
     font-size: 40px;
     line-height: 48px;
+    margin-bottom: 25px;
   }
 
   .company-team__list {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
     justify-content: space-between;
   }
 
@@ -251,8 +252,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    column-gap: 18px;
-    margin-bottom: 10px;
+    column-gap: 10px;
   }
 
   .company-team__social {
@@ -261,7 +261,7 @@ export default {
   }
 
   .company-team__offer-button {
-    padding: 24px 30px;
+    padding: 16px 20px;
     margin: 0;
     margin-right: auto;
     border-radius: 100px;
@@ -270,7 +270,7 @@ export default {
   }
 
   .company-team__contacts {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .company-team__condition {
@@ -299,6 +299,33 @@ export default {
 
   .company-team__close-button::after {
     transform: rotate(90deg);
+  }
+}
+
+@media (min-width: 1500px) {
+  .company-team {
+    padding: 60px 30px 0px;
+  }
+
+  .company-team__header {
+    margin-bottom: 50px;
+  }
+
+  .company-team__list {
+    margin-bottom: 100px;
+  }
+
+  .company-team__inside-wrapper {
+    column-gap: 18px;
+    margin-bottom: 10px;
+  }
+
+  .company-team__offer-button {
+    padding: 24px 30px;
+  }
+
+  .company-team__contacts {
+    margin-bottom: 40px;
   }
 }
 </style>

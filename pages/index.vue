@@ -195,6 +195,7 @@ export default {
 .application__dynamic-content {
   height: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .application__form-modal-wrapper {

@@ -300,7 +300,7 @@ export default {
   }
 }
 
-@media (min-width: 1919px) {
+@media (min-width: 1500px) {
   .profile-offer {
     padding: 60px 80px 0 130px;
   }

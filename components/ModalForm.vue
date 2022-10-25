@@ -94,6 +94,8 @@ export default {
       } else {
         console.log(response)
       }
+
+      this.$emit('close-form-modal')
     }
   }
 }

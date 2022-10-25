@@ -254,7 +254,7 @@ export default {
     }
   }
 
-  @media (min-width: 1919px) {
+  @media (min-width: 1500px) {
     .company-description {
       padding: 60px 40px 0px 130px;
     }

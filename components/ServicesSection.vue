@@ -174,7 +174,7 @@ export default {
   }
 }
 
-@media (min-width: 1919px) {
+@media (min-width: 1500px) {
   .services-page {
     padding: 60px 40px 0 130px;
   }

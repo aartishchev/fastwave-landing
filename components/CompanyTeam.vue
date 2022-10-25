@@ -322,7 +322,7 @@ export default {
   }
 }
 
-@media (min-width: 1919px) {
+@media (min-width: 1500px) {
   .company-team {
     padding: 60px 30px 0px;
   }

@@ -200,7 +200,7 @@ export default {
     }
   }
 
-  @media (min-width: 1700px) {
+  @media (min-width: 1919px) {
     .special-offer {
       padding: 110px 0 0 130px;
     }

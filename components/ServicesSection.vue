@@ -144,22 +144,23 @@ export default {
   display: none;
 }
 
-@media (min-width: 1218px) {
+@media (min-width: 1218px) and (min-height: 750px) {
   .services-page {
     padding: 30px 40px 0 130px;
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   .services-page__heading {
     font-size: 40px;
     line-height: 48px;
     max-width: 580px;
+    margin-bottom: 20px;
   }
 
   .services-page__list {
     grid-template-columns: repeat(2, minmax(0, 600px));
-    row-gap: 20px;
-    column-gap: 40px;
+    row-gap: 10px;
+    column-gap: 20px;
   }
 
   .services-page__item-heading {
@@ -171,12 +172,6 @@ export default {
   .services-page__item-text {
     font-size: 14px;
     letter-spacing: -0.25px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .services-page {
-    padding: 60px 40px 0 130px;
   }
 
   .services-page__cubes {
@@ -220,6 +215,22 @@ export default {
   .services-page__cube-icon-logo {
     width: 130px;
     height: 32px;
+  }
+}
+
+@media (min-width: 1218px) and (min-height: 900px)  {
+  .services-page {
+    padding: 60px 40px 0 130px;
+    max-width: 1200px;
+  }
+
+  .services-page__heading {
+    margin-bottom: 50px;
+  }
+
+  .services-page__list {
+    row-gap: 20px;
+    column-gap: 40px;
   }
 }
 </style>

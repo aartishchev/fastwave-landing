@@ -59,7 +59,9 @@ export default {
   name: 'IndexPage',
   data: () => ({
     MIN_DESKTOP_VIEWPORT_WIDTH: 1218,
+    MIN_DESKTOP_VIEWPORT_HEIGHT: 750,
     currentClientWidth: 0,
+    currentClientHeight: 0,
     currentContent: 'StartSection',
     isTeamModalShown: false,
     isFormModalShown: false,
@@ -93,7 +95,10 @@ export default {
   }),
   computed: {
     isDesktopLayout () {
-      return this.currentClientWidth >= this.MIN_DESKTOP_VIEWPORT_WIDTH
+      const isDestopWidth = this.currentClientWidth >= this.MIN_DESKTOP_VIEWPORT_WIDTH
+      const isDestopHeight = this.currentClientHeight >= this.MIN_DESKTOP_VIEWPORT_HEIGHT
+
+      return isDestopWidth && isDestopHeight
     }
   },
   mounted () {
@@ -115,6 +120,7 @@ export default {
   methods: {
     setWindowSize () {
       this.currentClientWidth = window.innerWidth
+      this.currentClientHeight = window.innerHeight
     },
     openTeamModal () {
       if (this.isFormModalShown) {

@@ -228,25 +228,25 @@ export default {
   letter-spacing: -0.5px;
 }
 
-@media (min-width: 1218px) {
+@media (min-width: 1218px) and (min-height: 750px) {
   .company-team {
-    padding: 30px 30px 0px;
+    padding: 60px 30px 0px;
   }
 
   .company-team__header {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   .company-team__list {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     justify-content: space-between;
   }
 
   .company-team__image {
-    width: 230px;
-    height: 200px;
+    width: 260px;
+    height: 230px;
     margin-bottom: 16px;
   }
 
@@ -259,7 +259,8 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    column-gap: 10px;
+    column-gap: 18px;
+    margin-bottom: 10px;
   }
 
   .company-team__social {
@@ -268,12 +269,8 @@ export default {
     margin-bottom: 0;
   }
 
-  .company-team__or-phrase {
-    display: none;
-  }
-
   .company-team__offer-button {
-    padding: 16px 20px;
+    padding: 24px 30px;
     margin: 0;
     margin-right: auto;
     border-radius: 100px;
@@ -286,13 +283,14 @@ export default {
   }
 
   .company-team__contacts {
-    margin-bottom: 20px;
+    margin: 40px 0;
   }
 
   .company-team__condition {
     font-size: 12px;
     line-height: 20px;
     letter-spacing: -0.5px;
+    max-width: 480px;
   }
 
   .company-team__close-button {
@@ -322,39 +320,9 @@ export default {
   }
 }
 
-@media (min-width: 1500px) {
-  .company-team {
-    padding: 60px 30px 0px;
-  }
-
-  .company-team__header {
-    margin-bottom: 50px;
-  }
-
+@media (min-width: 1218px) and (min-height: 900px)  {
   .company-team__list {
     margin-bottom: 100px;
-  }
-
-  .company-team__image {
-    width: 260px;
-    height: 230px;
-  }
-
-  .company-team__inside-wrapper {
-    column-gap: 18px;
-    margin-bottom: 10px;
-  }
-
-  .company-team__or-phrase {
-    display: block;
-  }
-
-  .company-team__offer-button {
-    padding: 24px 30px;
-  }
-
-  .company-team__contacts {
-    margin-bottom: 40px;
   }
 }
 </style>

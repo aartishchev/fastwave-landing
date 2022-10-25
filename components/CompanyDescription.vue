@@ -199,9 +199,9 @@ export default {
     height: 232px;
   }
 
-  @media (min-width: 1218px) {
+  @media (min-width: 1218px) and (min-height: 750px) {
     .company-description {
-      padding: 30px 40px 0px 130px;
+      padding: 60px 40px 0px 130px;
     }
 
     .company-description__centering-wrapper {
@@ -211,18 +211,18 @@ export default {
     .company-description__heading {
       font-size: 40px;
       line-height: 48px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .company-description__definition {
       font-size: 17px;
       line-height: 26px;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
     }
 
     .company-description__content-wrapper {
       row-gap: 32px;
-      margin-bottom: 20px;
+      margin-bottom: 80px;
       max-width: 950px;
       justify-content: space-between;
     }
@@ -254,23 +254,7 @@ export default {
     }
   }
 
-  @media (min-width: 1500px) {
-    .company-description {
-      padding: 60px 40px 0px 130px;
-    }
-
-    .company-description__heading {
-      margin-bottom: 40px;
-    }
-
-    .company-description__definition {
-      margin-bottom: 32px;
-    }
-
-    .company-description__content-wrapper {
-      margin-bottom: 80px;
-    }
-
+  @media (min-width: 1218px) and (min-height: 900px)  {
     .company-description__story {
       max-width: 540px;
     }

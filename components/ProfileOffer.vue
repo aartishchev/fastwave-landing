@@ -41,8 +41,8 @@
         <span class="sr-only">partner.name</span>
         <img
           class="profile-offer__partners-logo"
-          :width="isDesktopLayout ? 146 : 86"
-          :height="isDesktopLayout ? 146 : 86"
+          :width="isDesktopLayout ? 124 : 86"
+          :height="isDesktopLayout ? 124 : 86"
           :src="require(`~/assets/images/${partner.image}.jpg`)"
           :alt="partner.name"
         >
@@ -241,10 +241,10 @@ export default {
   height: 86px;
 }
 
-@media (min-width: 1218px) {
+@media (min-width: 1218px) and (min-height: 750px) {
   .profile-offer {
     padding: 30px 80px 0 130px;
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   .profile-offer__heading {
@@ -256,7 +256,7 @@ export default {
   .profile-offer__content-wrapper {
     flex-direction: row;
     column-gap: 60px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
 
   .profile-offer__text {
@@ -279,8 +279,8 @@ export default {
   }
 
   .profile-offer__item {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     font-size: 11px;
     line-height: 15px;
   }
@@ -291,18 +291,26 @@ export default {
     line-height: 15px;
   }
 
-  .profile-offer__partners-heading {
-    display: none;
-  }
-
   .profile-offer__partners-list {
     gap: 30px;
   }
+
+  .profile-offer__partners-heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .profile-offer__partners-logo {
+    width: 112px;
+    height: 112px;
+  }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1218px) and (min-height: 900px)  {
   .profile-offer {
     padding: 60px 80px 0 130px;
+    max-width: 1200px;
   }
 
   .profile-offer__heading {
@@ -313,15 +321,7 @@ export default {
     margin-bottom: 100px;
   }
 
-  .profile-offer__item {
-    width: 180px;
-    height: 180px;
-  }
-
   .profile-offer__partners-heading {
-    display: block;
-    font-size: 40px;
-    line-height: 48px;
     margin-bottom: 60px;
   }
 

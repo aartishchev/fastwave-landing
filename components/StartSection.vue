@@ -158,10 +158,11 @@ export default {
     padding: 40px 30px 0;
     min-height: auto;
     background-image:
-      url('~assets/images/start-desktop-bg.jpg'),
+      url('~assets/images/start-desktop-bg.png'),
       linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
     background-position: right center;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .start-page__header {

@@ -63,6 +63,7 @@ export default {
     offerItems: [
       {
         text: 'Производство товаров под вашим брендом',
+        detail: 'Найдем поставщика под производственные задачи и запустим OEM-производство под Вашей торговой маркой. Исключим посредников для сокращения расходов',
         image: require('~/assets/images/offer-bg1.jpg')
       },
       {
@@ -72,19 +73,23 @@ export default {
       },
       {
         text: 'Привезем по земле, воздуху или морю',
+        detail: 'Фиксируем ставку с момента заявки до получения на Вашем складе. Консолидируем Ваш груз с другими клиентами, чтобы Вы платили за товар, а не воздух',
         image: require('~/assets/images/offer-bg3.jpg')
       },
       {
         text: 'Личный менеджер',
+        detail: 'Мы всегда на связи и общаемся на трех языках. Проконсультируем и поможем в переговорном процессе с поставщиком',
         image: require('~/assets/images/offer-bg4.jpg')
 
       },
       {
         text: 'Проверка товара',
+        detail: 'Проверим продукцию на наличие брака, присвоим уникальный штрих-номер партии и упакуем товар согласно Вашим пожеланиям. Имеем складские комплексы в Китае и России',
         image: require('~/assets/images/offer-bg5.jpg')
       },
       {
         text: 'Страхование',
+        detail: 'Несем ответственность за товар и отвечаем не только своей репутацией, но и деньгами',
         image: require('~/assets/images/offer-bg6.jpg')
       }
     ],
@@ -189,6 +194,7 @@ export default {
   letter-spacing: -0.25px;
   color: white;
   text-align: center;
+  user-select: none;
 }
 
 .profile-offer__item::before {
@@ -202,8 +208,17 @@ export default {
   opacity: 0.8;
 }
 
-.profile-offer__item:nth-child(2):before {
+.profile-offer__item:hover::before,
+.profile-offer__item:focus::before,
+.profile-offer__item:active::before {
+  content: '';
+  position: absolute;
   background-color: #2b739a;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
 }
 
 .profile-offer__definition {
@@ -211,14 +226,26 @@ export default {
   z-index: 10;
 }
 
+.profile-offer__item:hover .profile-offer__definition,
+.profile-offer__item:focus .profile-offer__definition,
+.profile-offer__item:active .profile-offer__definition {
+  display: none;
+}
+
 .profile-offer__detail {
-  margin-top: 30px;
+  display: none;
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
   letter-spacing: -0.25px;
   padding: 0 10px;
   z-index: 10;
+}
+
+.profile-offer__item:hover .profile-offer__detail,
+.profile-offer__item:focus .profile-offer__detail,
+.profile-offer__item:active .profile-offer__detail {
+  display: block;
 }
 
 .profile-offer__partners-heading {
@@ -289,7 +316,6 @@ export default {
   }
 
   .profile-offer__detail {
-    margin-top: 20px;
     font-size: 11px;
     line-height: 15px;
   }

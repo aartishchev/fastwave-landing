@@ -223,7 +223,7 @@ export default {
     .company-description__content-wrapper {
       row-gap: 32px;
       margin-bottom: 80px;
-      max-width: 950px;
+      max-width: 960px;
       justify-content: space-between;
     }
 

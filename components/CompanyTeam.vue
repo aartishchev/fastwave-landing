@@ -4,7 +4,7 @@
       <h1 class="company-team__header">
         Люди - наша ценность.
         <br>
-        <span class="company-team__header-highlight">Мы работаем вместе</span>
+        <span class="company-team__header-highlight">Мы работаем вместе.</span>
       </h1>
 
       <ul class="company-team__list">
@@ -43,20 +43,30 @@
 
             <p class="company-team__messengers-wrapper">
               <span>Мессенджеры:</span>
-              <a>
-                <span class="sr-only">Ссылка на канал в Telegram</span>
-                <img src="@/assets/icons/telegram-link.svg" width="20" height="20" alt="Иконка Telegram">
+              <a class="company-team__social-link" href="https://vk.com/fastwave_logistics">
+                <span class="sr-only">Ссылка на группу в VK</span>
+                <img
+                  src="@/assets/icons/vk-link.svg"
+                  width="20"
+                  height="20"
+                  alt="Иконка VK"
+                >
               </a>
-              <a>
-                <span class="sr-only">Ссылка на канал в WhatsApp</span>
-                <img src="@/assets/icons/whatsapp-link.svg" width="20" height="20" alt="Иконка WhatsApp">
+              <a class="company-team__social-link" href="https://t.me/s/fastwave_logistics">
+                <span class="sr-only">Ссылка на канал в Telegram</span>
+                <img
+                  src="@/assets/icons/telegram-link.svg"
+                  width="20"
+                  height="20"
+                  alt="Иконка Telegram"
+                >
               </a>
             </p>
           </div>
           <p class="company-team__condition">
             Для обсуждения проектов мы предпочитаем личное общение,
             поэтому готовы приехать к вам или пригласить в наш офис по адресу:
-            Москва Город,ул. Малая Семёновская, д. 30, офис 213а
+            <b>Москва, Семеновский переулок дом 6, офис 42</b>
           </p>
         </div>
       </div>
@@ -174,6 +184,10 @@ export default {
   line-height: 46px;
 }
 
+.company-team__telnumber:hover {
+  opacity: 0.5;
+}
+
 .company-team__working-time {
   font-size: 16px;
   line-height: 23px;
@@ -215,10 +229,23 @@ export default {
   padding-left: 6px;
 }
 
+.company-team__email:hover {
+  opacity: 0.5;
+}
+
 .company-team__messengers-wrapper {
   display: flex;
   align-items: center;
   column-gap: 8px;
+}
+
+.company-team__social-link {
+  width: 20px;
+  height: 20px;
+}
+
+.company-team__social-link:hover {
+  opacity: 0.5;
 }
 
 .company-team__condition {

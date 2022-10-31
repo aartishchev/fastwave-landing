@@ -10,11 +10,11 @@
       >
 
       <p v-if="isDesktopLayout" class="start-page__motto">
-        Ответственность. Надежность. Оперативность
+        Ответственность. Надежность. Оперативность.
       </p>
 
       <div v-else class="start-page__social">
-        <a class="start-page__social-link">
+        <a class="start-page__social-link" href="https://vk.com/fastwave_logistics">
           <span class="sr-only">Ссылка на группу в VK</span>
           <img
             src="@/assets/icons/vk-link.svg"
@@ -24,7 +24,7 @@
           >
         </a>
 
-        <a class="start-page__social-link">
+        <a class="start-page__social-link" href="https://t.me/s/fastwave_logistics">
           <span class="sr-only">Ссылка на канал в Telegram</span>
           <img
             src="@/assets/icons/telegram-link.svg"
@@ -109,11 +109,19 @@ export default {
   height: 20px;
 }
 
+.start-page__social-link:hover {
+  opacity: 0.5;
+}
+
 .start-page__social-telnumber {
   grid-column: 1 / 3;
   font-size: 16px;
   line-height: 23px;
   font-weight: 600;
+}
+
+.start-page__social-telnumber:hover {
+  opacity: 0.5;
 }
 
 .start-page__heading {

@@ -33,8 +33,8 @@
       <div class="company-description__info-wrapper">
         <div class="company-description__offer-wrapper">
           <p class="company-description__offer">Читайте нас в VK</p>
-          <span class="company-description__about">работаем более 5 лет</span>
-          <hr class="company-description__divider">
+          <span class="company-description__about">хотим быть полезными</span>
+          <div class="company-description__divider" />
         </div>
         <ul class="company-description__images-list">
           <li v-for="(image, index) in descriptionImages" :key="index">

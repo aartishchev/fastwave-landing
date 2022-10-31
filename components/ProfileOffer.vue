@@ -14,7 +14,7 @@
           c основными отечественными маркетплейсами
         </p>
 
-        <hr class="profile-offer__divider">
+        <div class="profile-offer__divider" />
 
         <p class="profile-offer__description">
           Мы не предлагаем что-то уникальное. Мы объединили необходимые услуги,

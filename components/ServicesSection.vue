@@ -3,7 +3,7 @@
     <h1 class="services-page__heading">
       Не просто доставка.
       <span class="services-page__highlight">Экспертная</span>
-      логистика и снабжение
+      логистика и снабжение.
     </h1>
 
     <ul class="services-page__list">

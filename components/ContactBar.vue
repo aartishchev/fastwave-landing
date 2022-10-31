@@ -3,7 +3,7 @@
     <h1 class="contact-bar__heading">Контакты</h1>
 
     <div class="contact-bar__social">
-      <a class="contact-bar__social-link">
+      <a class="contact-bar__social-link" href="https://vk.com/fastwave_logistics">
         <span class="sr-only">Ссылка на группу в VK</span>
         <img
           src="@/assets/icons/vk-link.svg"
@@ -12,7 +12,7 @@
           alt="Иконка VK"
         >
       </a>
-      <a class="contact-bar__social-link">
+      <a class="contact-bar__social-link" href="https://t.me/s/fastwave_logistics">
         <span class="sr-only">Ссылка на канал в Telegram</span>
         <img
           src="@/assets/icons/telegram-link.svg"
@@ -49,6 +49,11 @@
     transform: rotate(270deg);
   }
 
+  .contact-bar:hover .contact-bar__heading {
+    font-weight: 700;
+    top: 55.3%;
+  }
+
   .contact-bar__social {
     display: grid;
     row-gap: 12px;
@@ -60,5 +65,9 @@
   .contact-bar__social-link {
     width: 20px;
     height: 20px;
+  }
+
+  .contact-bar__social-link:hover {
+    opacity: 0.5;
   }
 </style>

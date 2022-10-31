@@ -115,7 +115,7 @@ export default {
   created () {
     this.debouncedHander = debounce((event) => {
       this.setContentOnWheel(event)
-    }, 200)
+    }, 100)
   },
   methods: {
     setWindowSize () {

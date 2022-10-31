@@ -212,6 +212,10 @@ export default {
   font-weight: 600;
 }
 
+.company-team__offer-button:hover {
+  background-color: rgba(103, 178, 221, 0.5);
+}
+
 .company-team__contacts {
   font-family: 'Montserrat';
   display: grid;
@@ -303,10 +307,6 @@ export default {
     border-radius: 100px;
     font-size: 16px;
     line-height: 19px;
-  }
-
-  .company-team__offer-button:hover {
-    background-color: rgba(103, 178, 221, 0.5);
   }
 
   .company-team__contacts {

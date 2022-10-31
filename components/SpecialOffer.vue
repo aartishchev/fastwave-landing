@@ -137,6 +137,10 @@ export default {
     color: #252827;
   }
 
+  .special-offer__offer-button:hover {
+    opacity: 0.5;
+  }
+
   @media (min-width: 1218px) and (min-height: 750px) {
     .special-offer {
       padding: 110px 0 0 130px;
@@ -193,10 +197,6 @@ export default {
       border-radius: 100px;
       font-size: 16px;
       line-height: 20px;
-    }
-
-    .special-offer__offer-button:hover {
-      opacity: 0.5;
     }
   }
 </style>

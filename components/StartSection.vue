@@ -149,6 +149,10 @@ export default {
   font-weight: 700;
 }
 
+.start-page__contact-button:hover {
+    opacity: 0.5;
+  }
+
 @media (min-width: 1218px) {
   .start-page {
     padding: 40px 30px 0;
@@ -197,10 +201,6 @@ export default {
     border-radius: 100px;
     font-size: 16px;
     line-height: 19px;
-  }
-
-  .start-page__contact-button:hover {
-    opacity: 0.5;
   }
 }
 </style>

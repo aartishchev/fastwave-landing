@@ -33,7 +33,9 @@
       <div class="company-description__info-wrapper">
         <div class="company-description__offer-wrapper">
           <p class="company-description__offer">Читайте нас в VK</p>
-          <span class="company-description__about">хотим быть полезными</span>
+          <a class="company-description__about" href="https://vk.com/fastwave_logistics">
+            хотим быть полезными
+          </a>
           <div class="company-description__divider" />
         </div>
         <ul class="company-description__images-list">
@@ -169,6 +171,10 @@ export default {
     letter-spacing: -0.5px;
     padding-left: 30px;
     position: relative;
+  }
+
+  .company-description__about:hover {
+    opacity: 0.5;
   }
 
   .company-description__about::before {

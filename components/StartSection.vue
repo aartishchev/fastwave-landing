@@ -1,61 +1,56 @@
 <template>
   <section class="start-page">
-    <header class="start-page__header">
-      <img
-        class="start-page__logo"
-        src="@/assets/images/logo-transparent.png"
-        :width="isDesktopLayout ? 240 : 60"
-        :height="isDesktopLayout ? 40 : 20"
-        alt="Логотип"
-      >
-
-      <p v-if="isDesktopLayout" class="start-page__motto">
-        Ответственность. Надежность. Оперативность.
-      </p>
-
-      <div v-else class="start-page__social">
-        <a class="start-page__social-link" href="https://vk.com/fastwave_logistics">
-          <span class="sr-only">Ссылка на группу в VK</span>
-          <img
-            src="@/assets/icons/vk-link.svg"
-            width="20"
-            height="20"
-            alt="Иконка VK"
-          >
-        </a>
-
-        <a class="start-page__social-link" href="https://t.me/s/fastwave_logistics">
-          <span class="sr-only">Ссылка на канал в Telegram</span>
-          <img
-            src="@/assets/icons/telegram-link.svg"
-            width="20"
-            height="20"
-            alt="Иконка Telegram"
-          >
-        </a>
-
-        <a class="start-page__social-telnumber" href="tel:84957951326">
-          +7(495)7951326
-        </a>
-      </div>
-    </header>
-
-    <main class="start-page__main">
-      <h1 class="start-page__heading">
-        Безопасная доставка любых грузов из Китая за 7-30 дней
-      </h1>
-
-      <p class="start-page__description">
-        Организуем весь спектр логистических услуг с полной страховкой
-      </p>
-
-      <button
-        class="start-page__contact-button"
-        @click="$emit('open-form-modal')"
-      >
-        Перезвоните мне
-      </button>
-    </main>
+    <div class="start-page__wrapper">
+      <header class="start-page__header">
+        <img
+          class="start-page__logo"
+          src="@/assets/images/logo-transparent.png"
+          :width="isDesktopLayout ? 240 : 60"
+          :height="isDesktopLayout ? 40 : 20"
+          alt="Логотип"
+        >
+        <p v-if="isDesktopLayout" class="start-page__motto">
+          Ответственность. Надежность. Оперативность.
+        </p>
+        <div v-else class="start-page__social">
+          <a class="start-page__social-link" href="https://vk.com/fastwave_logistics">
+            <span class="sr-only">Ссылка на группу в VK</span>
+            <img
+              src="@/assets/icons/vk-link.svg"
+              width="20"
+              height="20"
+              alt="Иконка VK"
+            >
+          </a>
+          <a class="start-page__social-link" href="https://t.me/s/fastwave_logistics">
+            <span class="sr-only">Ссылка на канал в Telegram</span>
+            <img
+              src="@/assets/icons/telegram-link.svg"
+              width="20"
+              height="20"
+              alt="Иконка Telegram"
+            >
+          </a>
+          <a class="start-page__social-telnumber" href="tel:84957951326">
+            +7(495)7951326
+          </a>
+        </div>
+      </header>
+      <main class="start-page__main">
+        <h1 class="start-page__heading">
+          Безопасная доставка любых грузов из Китая за 7-30 дней
+        </h1>
+        <p class="start-page__description">
+          Организуем весь спектр логистических услуг с полной страховкой
+        </p>
+        <button
+          class="start-page__contact-button"
+          @click="$emit('open-form-modal')"
+        >
+          Перезвоните мне
+        </button>
+      </main>
+    </div>
   </section>
 </template>
 
@@ -76,12 +71,16 @@ export default {
   font-family: 'Inter';
   padding: 20px 10px;
   color: white;
+  background: linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
+  position: relative;
+}
+
+.start-page__wrapper {
   min-height: 705px;
-  background-image:
-    url('~assets/images/start-mobile-bg.jpg'),
-    linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
-  background-position: center bottom;
+  background-image: url('~assets/images/bg-image.png');
   background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 70%;
 }
 
 .start-page__header {
@@ -155,14 +154,13 @@ export default {
 
 @media (min-width: 1218px) {
   .start-page {
-    padding: 40px 30px 0;
-    min-height: auto;
-    background-image:
-      url('~assets/images/start-desktop-bg.png'),
-      linear-gradient(180deg, #77b7e3 0%, #4098ca 100%);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    padding: 40px 30px;
+  }
+
+  .start-page__wrapper {
+    background-position: center right;
+    background-size: 50%;
+    min-height: 100%;
   }
 
   .start-page__header {

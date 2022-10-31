@@ -7,7 +7,7 @@
     </h1>
 
     <div class="profile-offer__content-wrapper">
-      <div>
+      <div class="profile-offer__text-wrapper">
         <p class="profile-offer__text">
           Предлагаем комплекс услуг для предпринимателей,
           которые только начинают или уже активно сотрудничают
@@ -142,6 +142,7 @@ export default {
 
 .profile-offer__content-wrapper {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   row-gap: 50px;
   margin-bottom: 80px;
@@ -259,16 +260,18 @@ export default {
     margin-bottom: 35px;
   }
 
+  .profile-offer__text-wrapper {
+    flex-grow: 1;
+  }
+
   .profile-offer__text {
     font-size: 16px;
     line-height: 24px;
-    max-width: 310px;
   }
 
   .profile-offer__description {
     font-size: 16px;
     line-height: 20px;
-    max-width: 330px;
   }
 
   .profile-offer__list {

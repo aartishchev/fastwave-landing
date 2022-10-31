@@ -3,7 +3,7 @@
     <h1 class="contact-bar__heading">Контакты</h1>
 
     <div class="contact-bar__social">
-      <a class="contact-bar__social-link" href="https://vk.com/fastwave_logistics">
+      <a class="contact-bar__social-link" href="https://vk.com/fastwave_logistics" @click.stop>
         <span class="sr-only">Ссылка на группу в VK</span>
         <img
           src="@/assets/icons/vk-link.svg"
@@ -12,7 +12,7 @@
           alt="Иконка VK"
         >
       </a>
-      <a class="contact-bar__social-link" href="https://t.me/s/fastwave_logistics">
+      <a class="contact-bar__social-link" href="https://t.me/s/fastwave_logistics" @click.stop>
         <span class="sr-only">Ссылка на канал в Telegram</span>
         <img
           src="@/assets/icons/telegram-link.svg"

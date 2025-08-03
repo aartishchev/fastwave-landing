@@ -29,13 +29,14 @@
       </div>
     </div>
 
-    <p class="special-offer__offer-question">
-      Хотите получить лучшие условия по доставке майнинг оборудования из Китая?
-    </p>
-
-    <button class="special-offer__offer-button" @click="$emit('open-form-modal')">
-      Узнать цену
-    </button>
+    <template v-if="false">
+      <p class="special-offer__offer-question">
+        Хотите получить лучшие условия по доставке майнинг оборудования из Китая?
+      </p>
+      <button class="special-offer__offer-button" @click="$emit('open-form-modal')">
+        Узнать цену
+      </button>
+    </template>
   </section>
 </template>
 

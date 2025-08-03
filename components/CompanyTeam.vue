@@ -29,11 +29,12 @@
             <p class="company-team__working-time">С 9 до 18 МСК</p>
           </div>
 
-          <p class="company-team__or-phrase">или</p>
-
-          <button class="company-team__offer-button" @click="$emit('open-form-modal')">
-            Оставьте заявку
-          </button>
+          <template v-if="false">
+            <p class="company-team__or-phrase">или</p>
+            <button class="company-team__offer-button" @click="$emit('open-form-modal')">
+              Оставьте заявку
+            </button>
+          </template>
         </div>
         <div>
           <div class="company-team__contacts">
@@ -304,6 +305,7 @@ export default {
   }
 
   .company-team__social {
+    grid-template-rows: min-content;
     flex: none;
     text-align: left;
     margin-bottom: 0;

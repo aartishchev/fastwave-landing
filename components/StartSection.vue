@@ -52,6 +52,7 @@
           Организуем весь спектр логистических услуг с полной страховкой
         </p>
         <button
+          v-if="false"
           class="start-page__contact-button"
           @click="$emit('open-form-modal')"
         >

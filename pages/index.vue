@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
 
 export default {
   name: 'IndexPage',
@@ -147,17 +147,17 @@ export default {
     this.setWindowSize()
     window.addEventListener('resize', this.setWindowSize)
     document.addEventListener('keydown', this.onEscapeButton)
-    window.addEventListener('wheel', this.debouncedHander)
+    window.addEventListener('wheel', this.throttledHandler)
   },
   beforeUnmount () {
     window.removeEventListener('resize', this.setWindowSize)
     document.removeEventListener('keydown', this.onEscapeButton)
-    window.removeEventListener('wheel', this.debouncedHander)
+    window.removeEventListener('wheel', this.throttledHandler)
   },
   created () {
-    this.debouncedHander = debounce((event) => {
+    this.throttledHandler = throttle((event) => {
       this.setContentOnWheel(event)
-    }, 100)
+    }, 1250, { trailing: false })
   },
   methods: {
     setWindowSize () {
